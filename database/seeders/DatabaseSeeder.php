@@ -20,7 +20,11 @@ class DatabaseSeeder extends Seeder
             HomeTitle2Seeder::class,
             AboutTitleSeeder::class,
             AboutMeImageSeeder::class,
-            AboutMeContentSeeder::class
+            AboutMeContentSeeder::class,
+            AboutMeInfoSeeder::class,
+            AboutCountSeeder::class,
+            AboutSkillSeeder::class,
+            AboutInterestSeeder::class
         ]);
     }
 }

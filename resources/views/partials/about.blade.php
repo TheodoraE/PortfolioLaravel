@@ -19,20 +19,19 @@
           <div class="row">
             <div class="col-lg-6">
               <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 1 May 1995</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Website:</strong> www.example.com</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +123 456 7890</li>
-                <li><i class="icofont-rounded-right"></i> <strong>City:</strong> City : New York, USA</li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 30</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> Master</li>
-                <li><i class="icofont-rounded-right"></i> <strong>PhEmailone:</strong> email@example.com</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Available</li>
-              </ul>
-            </div>
+                @foreach ($aboutMeInfos as $info)
+                  <li><i class="{{$info->icon}}"></i> <strong>{{$info->title}}</strong> {{$info->text}}</li>
+                  <span style="display: none">{{$infoCount++}}</span>
+                  @if ($loop->iteration %4 == 0)
+                    </ul>
+                  </div>
+                    @if ($infoCount<8)
+                    <div class="col-lg-6">
+                      <ul>
+                    @endif
+                  @endif
+                @endforeach
+            {{-- </div> --}}
           </div>
           <p>{{$aboutMeContent[0]->text}}</p>
         </div>
@@ -45,37 +44,15 @@
 
       <div class="row">
 
-        <div class="col-lg-3 col-md-6">
-          <div class="count-box">
-            <i class="icofont-simple-smile"></i>
-            <span data-toggle="counter-up">232</span>
-            <p>Happy Clients</p>
+        @foreach ($aboutCounts as $count)
+          <div class="col-lg-3 col-md-6 {{$count->divColClass}}">
+            <div class="count-box">
+              <i class="{{$count->iClass}}"></i>
+              <span data-toggle="counter-up">{{$count->number}}</span>
+              <p>{{$count->description}}</p>
+            </div>
           </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-          <div class="count-box">
-            <i class="icofont-document-folder"></i>
-            <span data-toggle="counter-up">521</span>
-            <p>Projects</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-          <div class="count-box">
-            <i class="icofont-live-support"></i>
-            <span data-toggle="counter-up">1,463</span>
-            <p>Hours Of Support</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-          <div class="count-box">
-            <i class="icofont-users-alt-5"></i>
-            <span data-toggle="counter-up">15</span>
-            <p>Hard Workers</p>
-          </div>
-        </div>
+        @endforeach
 
       </div>
 
@@ -92,53 +69,22 @@
 
         <div class="col-lg-6">
 
-          <div class="progress">
-            <span class="skill">HTML <i class="val">100%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          @foreach ($aboutSkills as $skill)
+            <div class="progress">
+              <span class="skill">{{$skill->skill}} <i class="val">{{$skill->iValue}}</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{$skill->ariaValue}}" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
             </div>
-          </div>
+            <span style="display: none">{{$skillcount++}}</span>
 
-          <div class="progress">
-            <span class="skill">CSS <i class="val">90%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">JavaScript <i class="val">75%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-lg-6">
-
-          <div class="progress">
-            <span class="skill">PHP <i class="val">80%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">WordPress/CMS <i class="val">90%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">Photoshop <i class="val">55%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-        </div>
+            @if ($loop->iteration %3 == 0)
+              </div>
+              @if ($skillcount<6)
+                <div class="col-lg-6">
+              @endif  
+            @endif
+          @endforeach
 
       </div>
 
@@ -152,7 +98,16 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-3 col-md-4">
+        @foreach ($aboutInterests as $interest)
+          <div class="col-lg-3 col-md-4 {{$interest->divColClass}}">
+            <div class="icon-box">
+              <i class="{{$interest->iClass}}" style="{{$interest->iColor}}"></i>
+              <h3>{{$interest->description}}</h3>
+            </div>
+          </div>
+        @endforeach
+
+        {{-- <div class="col-lg-3 col-md-4">
           <div class="icon-box">
             <i class="ri-store-line" style="color: #ffbb2c;"></i>
             <h3>Lorem Ipsum</h3>
@@ -223,7 +178,8 @@
             <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
             <h3>Flavor Nivelanda</h3>
           </div>
-        </div>
+        </div> --}}
+
       </div>
 
     </div><!-- End Interests -->

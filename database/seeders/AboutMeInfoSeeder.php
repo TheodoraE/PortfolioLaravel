@@ -17,44 +17,44 @@ class AboutMeInfoSeeder extends Seeder
         DB::table('about_me_infos')->insert(
             [
                 [
-                    'icon' => "",
-                    'title' => "",
-                    'text' => ""
+                    'icon' => "icofont-rounded-right",
+                    'title' => "Birthday:",
+                    'text' => "1 May 1995"
                 ],
                 [
-                    'icon' => "",
-                    'title' => "",
-                    'text' => ""
+                    'icon' => "icofont-rounded-right",
+                    'title' => "Website:",
+                    'text' => "www.example.com"
                 ],
                 [
-                    'icon' => "",
-                    'title' => "",
-                    'text' => ""
+                    'icon' => "icofont-rounded-right",
+                    'title' => "Phone:",
+                    'text' => "+123 456 7890"
                 ],
                 [
-                    'icon' => "",
-                    'title' => "",
-                    'text' => ""
+                    'icon' => "icofont-rounded-right",
+                    'title' => "City:",
+                    'text' => "New York, USA"
                 ],
                 [
-                    'icon' => "",
-                    'title' => "",
-                    'text' => ""
+                    'icon' => "icofont-rounded-right",
+                    'title' => "Age:",
+                    'text' => "30"
                 ],
                 [
-                    'icon' => "",
-                    'title' => "",
-                    'text' => ""
+                    'icon' => "icofont-rounded-right",
+                    'title' => "Degree:",
+                    'text' => "Master"
                 ],
                 [
-                    'icon' => "",
-                    'title' => "",
-                    'text' => ""
+                    'icon' => "icofont-rounded-right",
+                    'title' => "Email",
+                    'text' => "email@example.com"
                 ],
                 [
-                    'icon' => "",
-                    'title' => "",
-                    'text' => ""
+                    'icon' => "icofont-rounded-right",
+                    'title' => "Freelance",
+                    'text' => "Available"
                 ]
             ]
         );
