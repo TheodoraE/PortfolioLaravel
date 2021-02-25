@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BackController;
+use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// FrontOffice
+Route::get('/', [FrontController::class, 'index']);
+
+
+// BackOffice
+Route::get('/backoffice', [BackController::class, 'index']);
