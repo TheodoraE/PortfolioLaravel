@@ -24,7 +24,13 @@ class DatabaseSeeder extends Seeder
             AboutMeInfoSeeder::class,
             AboutCountSeeder::class,
             AboutSkillSeeder::class,
-            AboutInterestSeeder::class
+            AboutInterestSeeder::class,
+            ResumeTitleSeeder::class,
+            ResumePresentationSeeder::class,
+            ResumeTitle2Seeder::class,
+            ResumeInfoSeeder::class,
+            ResumeEducationSeeder::class,
+            ResumeProfessionalSeeder::class
         ]);
     }
 }

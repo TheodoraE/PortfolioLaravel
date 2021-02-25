@@ -12,6 +12,12 @@ use App\Models\AboutTitle;
 use App\Models\HomeTitle;
 use App\Models\HomeTitle2;
 use App\Models\Navlink;
+use App\Models\ResumeEducation;
+use App\Models\ResumeInfo;
+use App\Models\ResumePresentation;
+use App\Models\ResumeProfessional;
+use App\Models\ResumeTitle;
+use App\Models\ResumeTitle2;
 use App\Models\SocialLink;
 use Illuminate\Http\Request;
 
@@ -36,7 +42,15 @@ class FrontController extends Controller
         $skillcount = 0;
         $aboutInterests = AboutInterest::all();
 
-        return view('welcome', compact('navlinks', 'socialLinks', 'homeTitle', 'homeTitle2', 'aboutTitle', 'aboutMeImg', 'aboutMeContent', 'aboutMeInfos', 'infoCount', 'aboutCounts', 'aboutSkills', 'skillcount', 'aboutInterests'));
+        // Resume
+        $resumeTitle = ResumeTitle::all();
+        $resumePresentation = ResumePresentation::all();
+        $resumeTitles2 = ResumeTitle2::all();
+        $resumeInfos = ResumeInfo::all();
+        $resumeEducations = ResumeEducation::all();
+        $resumeProfessionals = ResumeProfessional::all();
+
+        return view('welcome', compact('navlinks', 'socialLinks', 'homeTitle', 'homeTitle2', 'aboutTitle', 'aboutMeImg', 'aboutMeContent', 'aboutMeInfos', 'infoCount', 'aboutCounts', 'aboutSkills', 'skillcount', 'aboutInterests', 'resumeTitle', 'resumePresentation', 'resumeTitles2', 'resumeInfos', 'resumeEducations', 'resumeProfessionals'));
     }
 
 
