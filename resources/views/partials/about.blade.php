@@ -5,20 +5,17 @@
     <div class="about-me container">
 
       <div class="section-title">
-        <h2>About</h2>
-        <p>Learn more about me</p>
+        <h2>{{$aboutTitle[0]->title}}</h2>
+        <p>{{$aboutTitle[0]->para}}</p>
       </div>
 
       <div class="row">
         <div class="col-lg-4" data-aos="fade-right">
-          <img src="{{asset('img/me.jpg')}}" class="img-fluid" alt="">
+          <img src="{{asset($aboutMeImg[0]->src)}}" class="img-fluid" alt="">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>UI/UX &amp; Graphic Designer</h3>
-          <p class="font-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
-          </p>
+          <h3>{{$aboutMeContent[0]->title}}</h3>
+          <p class="font-italic">{{$aboutMeContent[0]->description}}</p>
           <div class="row">
             <div class="col-lg-6">
               <ul>
@@ -37,10 +34,7 @@
               </ul>
             </div>
           </div>
-          <p>
-            Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-            Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-          </p>
+          <p>{{$aboutMeContent[0]->text}}</p>
         </div>
       </div>
 
@@ -91,7 +85,7 @@
     <div class="skills container">
 
       <div class="section-title">
-        <h2>Skills</h2>
+        <h2>{{$aboutTitle[1]->title}}</h2>
       </div>
 
       <div class="row skills-content">
@@ -154,7 +148,7 @@
     <div class="interests container">
 
       <div class="section-title">
-        <h2>Interests</h2>
+        <h2>{{$aboutTitle[2]->title}}</h2>
       </div>
 
       <div class="row">

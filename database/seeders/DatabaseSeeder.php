@@ -17,7 +17,10 @@ class DatabaseSeeder extends Seeder
             NavlinkSeeder::class,
             SocialLinkSeeder::class,
             HomeTitleSeeder::class,
-            HomeTitle2Seeder::class
+            HomeTitle2Seeder::class,
+            AboutTitleSeeder::class,
+            AboutMeImageSeeder::class,
+            AboutMeContentSeeder::class
         ]);
     }
 }
