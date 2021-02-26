@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Backoffice</title>
+    <title>Portfolio - Backoffice</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
-<body>
+<body style="background: url('{{asset('img/bg.jpg')}}')">
     {{-- Header --}}
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light my-3 mx-5">
-            <a class="navbar-brand" href="/">Portfolio</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-3 mx-5">
+            <a class="navbar-brand" href="/">FrontOffice</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -19,13 +19,13 @@
               <ul class="navbar-nav">
 
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#navLinks">Nav Links <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
+                  <a class="nav-link" href="#socialLinks">Social Links</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
+                  <a class="nav-link" href="#"> </a>
                 </li>
               </ul>
             </div>

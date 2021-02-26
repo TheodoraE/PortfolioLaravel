@@ -1,5 +1,8 @@
 @extends('template.second')
 
 @section('content')
-    includ
+    <section class="container mt-5">
+        @include('backoffice.partials.navLinks')
+
+    </section>
 @endsection

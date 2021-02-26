@@ -9,45 +9,31 @@
 
       <div class="row mt-2">
 
-        <div class="col-md-6 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-map"></i>
-            <h3>My Address</h3>
-            <p>A108 Adam Street, New York, NY 535022</p>
-          </div>
-        </div>
+        @foreach ($contactCards as $card)
+          <div class="col-md-6 {{$card->divColClass}} d-flex align-items-stretch">
+            <div class="info-box">
+              <i class="{{$card->iClass}}"></i>
+              <h3>{{$card->title}}</h3>
+              <span style="display: none">{{$contactCount++}}</span>
 
-        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-share-alt"></i>
-            <h3>Social Profiles</h3>
-            <div class="social-links">
-              @foreach ($socialLinks as $link)
-                <a href="{{$link->href}}" target="_blank" class="{{$link->aClass}}"><i class="{{$link->iClass}}"></i></a>
-              @endforeach
+              @if (($contactCount>2) || ($contactCount<2))
+                <p>{{$card->description}}</p>
+              @elseif ($contactCount == 2)
+                <div class="social-links">
+                  @foreach ($socialLinks as $link)
+                    <a href="{{$link->href}}" target="_blank" class="{{$link->aClass}}"><i class="{{$link->iClass}}"></i></a>
+                  @endforeach
+                </div>
+              @endif
+              
             </div>
           </div>
-        </div>
+        @endforeach
 
-
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-envelope"></i>
-            <h3>Email Me</h3>
-            <p>contact@example.com</p>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-phone-call"></i>
-            <h3>Call Me</h3>
-            <p>+1 5589 55488 55</p>
-          </div>
-        </div>
       </div>
 
       {{-- Action Form à changer --}}
-      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+      <form action="{{asset('forms/contact.php')}}" method="post" role="form" class="php-email-form mt-4">
         <div class="form-row">
           <div class="col-md-6 form-group">
             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
