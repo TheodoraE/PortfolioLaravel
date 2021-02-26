@@ -12,6 +12,9 @@ use App\Models\AboutTitle;
 use App\Models\HomeTitle;
 use App\Models\HomeTitle2;
 use App\Models\Navlink;
+use App\Models\PortfolioDiv;
+use App\Models\PortfolioFilter;
+use App\Models\PortfolioTitle;
 use App\Models\ResumeEducation;
 use App\Models\ResumeInfo;
 use App\Models\ResumePresentation;
@@ -50,7 +53,12 @@ class FrontController extends Controller
         $resumeEducations = ResumeEducation::all();
         $resumeProfessionals = ResumeProfessional::all();
 
-        return view('welcome', compact('navlinks', 'socialLinks', 'homeTitle', 'homeTitle2', 'aboutTitle', 'aboutMeImg', 'aboutMeContent', 'aboutMeInfos', 'infoCount', 'aboutCounts', 'aboutSkills', 'skillcount', 'aboutInterests', 'resumeTitle', 'resumePresentation', 'resumeTitles2', 'resumeInfos', 'resumeEducations', 'resumeProfessionals'));
+        // Portfolio
+        $portfolioTitle = PortfolioTitle::all();
+        $portfolioFilters = PortfolioFilter::all();
+        $portfolioDivs = PortfolioDiv::all();
+
+        return view('welcome', compact('navlinks', 'socialLinks', 'homeTitle', 'homeTitle2', 'aboutTitle', 'aboutMeImg', 'aboutMeContent', 'aboutMeInfos', 'infoCount', 'aboutCounts', 'aboutSkills', 'skillcount', 'aboutInterests', 'resumeTitle', 'resumePresentation', 'resumeTitles2', 'resumeInfos', 'resumeEducations', 'resumeProfessionals', 'portfolioTitle', 'portfolioFilters', 'portfolioDivs'));
     }
 
 

@@ -30,7 +30,10 @@ class DatabaseSeeder extends Seeder
             ResumeTitle2Seeder::class,
             ResumeInfoSeeder::class,
             ResumeEducationSeeder::class,
-            ResumeProfessionalSeeder::class
+            ResumeProfessionalSeeder::class,
+            PortfolioTitleSeeder::class,
+            PortfolioFilterSeeder::class,
+            PortfolioDivSeeder::class
         ]);
     }
 }
