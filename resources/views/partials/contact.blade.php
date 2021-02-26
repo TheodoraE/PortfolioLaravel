@@ -3,8 +3,8 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>Contact</h2>
-        <p>Contact Me</p>
+        <h2>{{$contactTitle[0]->title}}</h2>
+        <p>{{$contactTitle[0]->para}}</p>
       </div>
 
       <div class="row mt-2">
@@ -22,14 +22,13 @@
             <i class="bx bx-share-alt"></i>
             <h3>Social Profiles</h3>
             <div class="social-links">
-              <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-              <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-              <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="icofont-skype"></i></a>
-              <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+              @foreach ($socialLinks as $link)
+                <a href="{{$link->href}}" target="_blank" class="{{$link->aClass}}"><i class="{{$link->iClass}}"></i></a>
+              @endforeach
             </div>
           </div>
         </div>
+
 
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">

@@ -33,7 +33,9 @@ class DatabaseSeeder extends Seeder
             ResumeProfessionalSeeder::class,
             PortfolioTitleSeeder::class,
             PortfolioFilterSeeder::class,
-            PortfolioDivSeeder::class
+            PortfolioDivSeeder::class,
+            ContactTitleSeeder::class,
+            ContactCardSeeder::class
         ]);
     }
 }

@@ -9,6 +9,8 @@ use App\Models\AboutMeImage;
 use App\Models\AboutMeInfo;
 use App\Models\AboutSkill;
 use App\Models\AboutTitle;
+use App\Models\ContactCard;
+use App\Models\ContactTitle;
 use App\Models\HomeTitle;
 use App\Models\HomeTitle2;
 use App\Models\Navlink;
@@ -58,7 +60,11 @@ class FrontController extends Controller
         $portfolioFilters = PortfolioFilter::all();
         $portfolioDivs = PortfolioDiv::all();
 
-        return view('welcome', compact('navlinks', 'socialLinks', 'homeTitle', 'homeTitle2', 'aboutTitle', 'aboutMeImg', 'aboutMeContent', 'aboutMeInfos', 'infoCount', 'aboutCounts', 'aboutSkills', 'skillcount', 'aboutInterests', 'resumeTitle', 'resumePresentation', 'resumeTitles2', 'resumeInfos', 'resumeEducations', 'resumeProfessionals', 'portfolioTitle', 'portfolioFilters', 'portfolioDivs'));
+        // Contact
+        $contactTitle = ContactTitle::all();
+        $contactCards = ContactCard::all();
+
+        return view('welcome', compact('navlinks', 'socialLinks', 'homeTitle', 'homeTitle2', 'aboutTitle', 'aboutMeImg', 'aboutMeContent', 'aboutMeInfos', 'infoCount', 'aboutCounts', 'aboutSkills', 'skillcount', 'aboutInterests', 'resumeTitle', 'resumePresentation', 'resumeTitles2', 'resumeInfos', 'resumeEducations', 'resumeProfessionals', 'portfolioTitle', 'portfolioFilters', 'portfolioDivs', 'contactTitle', 'contactCards'));
     }
 
 
