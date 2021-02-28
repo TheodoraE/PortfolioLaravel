@@ -12,11 +12,11 @@ Git/GitHub
 - Contact
 
 ## Minimum requis : 
-Template(extends, yield,include etc)
+__Template(extends, yield,include etc)__
 Crud complet pour chaque section
 __La db doit etre créer avec des fichiers migrations__
 __Des seeders ou factory selon besoin pour chaques données__
-Les images doivent déjà être dans public
+__Les images doivent déjà être dans public__
 Des validates
 Des old
 Des routes nomées

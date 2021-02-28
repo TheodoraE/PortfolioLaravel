@@ -44,7 +44,7 @@
                 <li>{{$professional->task1}}</li>
                 <li>{{$professional->task2}} </li>
                 <li>{{$professional->task3}}</li>
-                <li>{{$professional->task4}}/li>
+                <li>{{$professional->task4}}</li>
               </ul>
               </p>
             </div>
