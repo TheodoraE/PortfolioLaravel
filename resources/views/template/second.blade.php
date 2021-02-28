@@ -18,50 +18,59 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
 
-                <li class="nav-item">
-                  <a class="nav-link" href="/backoffice#navLinks">Nav Links <span class="sr-only">(current)</span></a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Home
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/backoffice#navLinks">Nav Links</a>
+                    <a class="dropdown-item" href="/backoffice#socialLinks">Social Links</a>
+                  </div>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/backoffice#socialLinks">Social Links</a>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/backoffice#aboutTitles">About Titles</a>
+                    <a class="dropdown-item" href="/backoffice#aboutCounts">About Counts</a>
+                    <a class="dropdown-item" href="/backoffice#aboutSkills">About Skills</a>
+                    <a class="dropdown-item" href="/backoffice#aboutInterests">About Interests</a>
+                  </div>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/backoffice#aboutTitles">About Titles</a>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Resume
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/backoffice#resumeTitles">Resume Titles</a>
+                    <a class="dropdown-item" href="/backoffice#resumeTitles2">Resume Subtitles</a>
+                    <a class="dropdown-item" href="/backoffice#resumeInfos">Resume Infos</a>
+                    <a class="dropdown-item" href="/backoffice#resumeEducations">Resume Education</a>
+                  </div>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/backoffice#aboutCounts">About Counts</a>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Portfolio
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/backoffice#portfolioTitles">Portfolio Titles</a>
+                    <a class="dropdown-item" href="/backoffice#portfolioFilters">Portfolio Filters</a>
+                    <a class="dropdown-item" href="/backoffice#portfolioDivs">Portfolio Divs</a>
+                  </div>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/backoffice#aboutSkills">About Skills</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/backoffice#aboutInterests">About Interests</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/backoffice#resumeTitles">Resume Titles</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/backoffice#resumeTitles2">Resume Subtitles</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/backoffice#resumeInfos">Resume Infos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/backoffice#resumeEducations">Resume Education</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/backoffice#portfolioTitles">Portfolio Titles</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/backoffice#portfolioFilters">Portfolio Filters</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/backoffice#portfolioDivs">Portfolio Divs</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/backoffice#contactTitles">Contact Titles</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/backoffice#contactCards">Contact Cards</a>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Contact
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/backoffice#contactTitles">Contact Titles</a>
+                    <a class="dropdown-item" href="/backoffice#contactCards">Contact Cards</a>
+                  </div>
                 </li>
               </ul>
             </div>
