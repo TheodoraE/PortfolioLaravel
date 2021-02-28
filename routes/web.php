@@ -101,3 +101,27 @@ Route::get('/editResumeEducations/{id}', [BackController::class, 'editResumeEduc
 Route::post('updateResumeEducations/{id}', [BackController::class, 'updateResumeEducations']);
 Route::post('/destroyResumeEducations/{id}', [BackController::class, 'destroyResumeEducations']);
 Route::post('/destroyAllResumeEducations', [BackController::class, 'destroyAllResumeEducations']);
+    // Portfolio Titles
+Route::get('/createPortfolioTitles', [BackController::class, 'createPortfolioTitles']);
+Route::post('/storePortfolioTitles', [BackController::class, 'storePortfolioTitles']);
+Route::get('/showPortfolioTitles/{id}', [BackController::class, 'showPortfolioTitles']);
+Route::get('/editPortfolioTitles/{id}', [BackController::class, 'editPortfolioTitles']);
+Route::post('updatePortfolioTitles/{id}', [BackController::class, 'updatePortfolioTitles']);
+Route::post('/destroyPortfolioTitles/{id}', [BackController::class, 'destroyPortfolioTitles']);
+Route::post('/destroyAllPortfolioTitles', [BackController::class, 'destroyAllPortfolioTitles']);
+    // Portfolio Filters
+Route::get('/createPortfolioFilters', [BackController::class, 'createPortfolioFilters']);
+Route::post('/storePortfolioFilters', [BackController::class, 'storePortfolioFilters']);
+Route::get('/showPortfolioFilters/{id}', [BackController::class, 'showPortfolioFilters']);
+Route::get('/editPortfolioFilters/{id}', [BackController::class, 'editPortfolioFilters']);
+Route::post('updatePortfolioFilters/{id}', [BackController::class, 'updatePortfolioFilters']);
+Route::post('/destroyPortfolioFilters/{id}', [BackController::class, 'destroyPortfolioFilters']);
+Route::post('/destroyAllPortfolioFilters', [BackController::class, 'destroyAllPortfolioFilters']);
+    // Portfolio Divs
+Route::get('/createPortfolioDivs', [BackController::class, 'createPortfolioDivs']);
+Route::post('/storePortfolioDivs', [BackController::class, 'storePortfolioDivs']);
+Route::get('/showPortfolioDivs/{id}', [BackController::class, 'showPortfolioDivs']);
+Route::get('/editPortfolioDivs/{id}', [BackController::class, 'editPortfolioDivs']);
+Route::post('updatePortfolioDivs/{id}', [BackController::class, 'updatePortfolioDivs']);
+Route::post('/destroyPortfolioDivs/{id}', [BackController::class, 'destroyPortfolioDivs']);
+Route::post('/destroyAllPortfolioDivs', [BackController::class, 'destroyAllPortfolioDivs']);

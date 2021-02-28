@@ -1,11 +1,11 @@
-<div id="resumeTitles" class="bg-light my-5 p-2">
+<div id="portfolioTitles" class="bg-light my-5 p-2">
     <div>
-        <h1 class="m-3">Resume Titles</h1>
+        <h1 class="m-3">Portfolio Titles</h1>
         <div class="w-25 d-flex justify-content-around my-2">
             {{-- Create --}}
-            <a href="/createResumeTitles" class="btn btn-success">ADD</a>
+            <a href="/createPortfolioTitles" class="btn btn-success">ADD</a>
             {{-- Delete All --}}
-            <form action="/destroyAllResumeTitles" method="POST">
+            <form action="/destroyAllPortfolioTitles" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-dark">DELETE ALL</button>
             </form>
@@ -26,22 +26,22 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($resumeTitles as $link)
+            @foreach ($portfolioTitles as $link)
             <tr>
                 <th scope="row">{{$link->id}}</th>
                 <td>{{$link->title}}</td>
                 <td>{{$link->para}}</td>
                 <td>
                     {{-- Show --}}
-                    <a href="/showResumeTitles/{{$link->id}}" class="btn btn-primary">SHOW</a>
+                    <a href="/showPortfolioTitles/{{$link->id}}" class="btn btn-primary">SHOW</a>
                 </td>
                 <td>
                     {{-- Edit --}}
-                    <a href="/editResumeTitles/{{$link->id}}" class="btn btn-warning">EDIT</a>
+                    <a href="/editPortfolioTitles/{{$link->id}}" class="btn btn-warning">EDIT</a>
                 </td>
                 <td>
                     {{-- Delete --}}
-                    <form action="/destroyResumeTitles/{{$link->id}}" method="POST">
+                    <form action="/destroyPortfolioTitles/{{$link->id}}" method="POST">
                         @csrf
                         <button type="submit" class="btn btn-danger">DELETE</button>
                     </form>

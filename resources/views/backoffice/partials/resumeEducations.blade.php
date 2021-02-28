@@ -1,6 +1,6 @@
 <div id="resumeEducations" class="bg-light my-5 p-2">
     <div>
-        <h1 class="m-3">About Educations</h1>
+        <h1 class="m-3">Resume Educations</h1>
         <div class="w-25 d-flex justify-content-around my-2">
             {{-- Create --}}
             <a href="/createResumeEducations" class="btn btn-success">ADD</a>

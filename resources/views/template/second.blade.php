@@ -48,6 +48,15 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/backoffice#resumeEducations">Resume Education</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/backoffice#portfolioTitles">Portfolio Titles</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/backoffice#portfolioFilters">Portfolio Filters</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/backoffice#portfolioDivs">Portfolio Divs</a>
+                </li>
               </ul>
             </div>
         </nav>

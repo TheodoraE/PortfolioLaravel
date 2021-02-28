@@ -15,6 +15,10 @@
         @include('backoffice.partials.resumeInfos')
         @include('backoffice.partials.resumeEducations')
 
+        @include('backoffice.partials.portfolioTitles')
+        @include('backoffice.partials.portfolioFilters')
+        @include('backoffice.partials.portfolioDivs')
+
 
     </section>
 @endsection

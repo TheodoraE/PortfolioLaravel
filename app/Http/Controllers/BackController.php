@@ -112,7 +112,20 @@ class BackController extends Controller
     {
         return view('backoffice.pages.create.createResumeEducations');
     }
-    
+    public function createPortfolioTitles()
+    {
+        return view('backoffice.pages.create.createPortfolioTitles');
+    }
+    public function createPortfolioFilters()
+    {
+        return view('backoffice.pages.create.createPortfolioFilters');
+    }
+    public function createPortfolioDivs()
+    {
+        return view('backoffice.pages.create.createPortfolioDivs');
+    }
+
+
 
 
     ////  STORE
@@ -254,6 +267,54 @@ class BackController extends Controller
         $store->save();
         return redirect()->back();
     }
+    public function storePortfolioTitles(Request $request)
+    {
+        $validation = $request->validate([
+            "title" => 'required',
+        ]);
+
+        $store = new PortfolioTitle;
+        $store->title = $request->title;
+        $store->para = $request->para;
+        $store->save();
+        return redirect()->back();
+    }
+    public function storePortfolioFilters(Request $request)
+    {
+        $validation = $request->validate([
+            "data" => 'required',
+            "name" => 'required'
+        ]);
+
+        $store = new PortfolioFilter;
+        $store->data = $request->data;
+        $store->name = $request->name;
+        $store->save();
+        return redirect()->back();
+    }
+    public function storePortfolioDivs(Request $request)
+    {
+        $validation = $request->validate([
+            "filter" => 'required',
+            "imgsrc" => 'required',
+            "title" => 'required',
+            "description" => 'required',
+            "a1Title" => 'required',
+            "a2href" => 'required',
+        ]);
+
+        $store = new PortfolioDiv;
+        $store->filter = $request->filter;
+        $store->imgsrc = $request->imgsrc;
+        $store->title = $request->title;
+        $store->description = $request->description;
+        $store->a1Title = $request->a1Title;
+        $store->a2href = $request->a2href;
+        $store->save();
+        return redirect()->back();
+    }
+
+
 
 
 
@@ -307,6 +368,21 @@ class BackController extends Controller
     {
         $show = ResumeEducation::find($id);
         return view('backoffice.pages.show.showResumeEducations', compact('show'));
+    }
+    public function showPortfolioTitles($id)
+    {
+        $show = PortfolioTitle::find($id);
+        return view('backoffice.pages.show.showPortfolioTitles', compact('show'));
+    }
+    public function showPortfolioFilters($id)
+    {
+        $show = PortfolioFilter::find($id);
+        return view('backoffice.pages.show.showPortfolioFilters', compact('show'));
+    }
+    public function showPortfolioDivs($id)
+    {
+        $show = PortfolioDiv::find($id);
+        return view('backoffice.pages.show.showPortfolioDivs', compact('show'));
     }
 
 
@@ -362,6 +438,21 @@ class BackController extends Controller
     {
         $edit = ResumeEducation::find($id);
         return view('backoffice.pages.edit.editResumeEducations', compact('edit'));
+    }
+    public function editPortfolioTitles($id)
+    {
+        $edit = PortfolioTitle::find($id);
+        return view('backoffice.pages.edit.editPortfolioTitles', compact('edit'));
+    }
+    public function editPortfolioFilters($id)
+    {
+        $edit = PortfolioFilter::find($id);
+        return view('backoffice.pages.edit.editPortfolioFilters', compact('edit'));
+    }
+    public function editPortfolioDivs($id)
+    {
+        $edit = PortfolioDiv::find($id);
+        return view('backoffice.pages.edit.editPortfolioDivs', compact('edit'));
     }
 
 
@@ -507,7 +598,58 @@ class BackController extends Controller
         $update->save();
         return redirect('/backoffice');
     }
+    public function updatePortfolioTitles(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "title" => 'required',
+        ]);
+
+        $update = PortfolioTitle::find($id);
+        $update->title = $request->title;
+        $update->para = $request->para;
+        $update->save();
+        return redirect('/backoffice');
+    }
+    public function updatePortfolioFilters(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "data" => 'required',
+            "name" => 'required'
+        ]);
+        $update = PortfolioFilter::find($id);
+        $update->data = $request->data;
+        $update->name = $request->name;
+        $update->save();
+        return redirect('/backoffice');
+
+        $store = new PortfolioFilter;
+    }
+    public function updatePortfolioDivs(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "filter" => 'required',
+            "imgsrc" => 'required',
+            "title" => 'required',
+            "description" => 'required',
+            "a1Title" => 'required',
+            "a2href" => 'required',
+        ]);
+
+        $update = PortfolioDiv::find($id);
+        $update->filter = $request->filter;
+        $update->imgsrc = $request->imgsrc;
+        $update->title = $request->title;
+        $update->description = $request->description;
+        $update->a1Title = $request->a1Title;
+        $update->a2href = $request->a2href;
+        $update->save();
+        return redirect('/backoffice');
+
+        $store = new PortfolioFilter;        
+    }
     
+
+
 
 
     ////  DESTROY
@@ -571,6 +713,25 @@ class BackController extends Controller
         $destroy->delete();
         return redirect('/backoffice');
     }
+    public function destroyPortfolioTitles($id)
+    {
+        $destroy = PortfolioTitle::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
+    public function destroyPortfolioFilters($id)
+    {
+        $destroy = PortfolioFilter::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
+    public function destroyPortfolioDivs($id)
+    {
+        $destroy = PortfolioDiv::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
+    
 
 
 
@@ -650,6 +811,30 @@ class BackController extends Controller
     public function destroyAllResumeEducations()
     {
         $destroyALL = ResumeEducation::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
+    public function destroyAllPortfolioTitles()
+    {
+        $destroyALL = PortfolioTitle::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
+    public function destroyAllPortfolioFilters()
+    {
+        $destroyALL = PortfolioFilter::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
+    public function destroyAllPortfolioDivs()
+    {
+        $destroyALL = PortfolioDiv::all();
         foreach ($destroyALL as $destroy) {
             $destroy->delete();
         };
