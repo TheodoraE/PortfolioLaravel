@@ -25,7 +25,10 @@
                   <a class="nav-link" href="/backoffice#socialLinks">Social Links</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"> </a>
+                  <a class="nav-link" href="/backoffice#aboutTitles">About Titles</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/backoffice#aboutCounts">About Counts</a>
                 </li>
               </ul>
             </div>

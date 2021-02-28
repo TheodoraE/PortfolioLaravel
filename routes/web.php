@@ -37,3 +37,11 @@ Route::get('/editSocialLinks/{id}', [BackController::class, 'editSocialLinks']);
 Route::post('updateSocialLinks/{id}', [BackController::class, 'updateSocialLinks']);
 Route::post('/destroySocialLinks/{id}', [BackController::class, 'destroySocialLinks']);
 Route::post('/destroyAllSocialLinks', [BackController::class, 'destroyAllSocialLinks']);
+    // About Titles
+Route::get('/createAboutTitles', [BackController::class, 'createAboutTitles']);
+Route::post('/storeAboutTitles', [BackController::class, 'storeAboutTitles']);
+Route::get('/showAboutTitles/{id}', [BackController::class, 'showAboutTitles']);
+Route::get('/editAboutTitles/{id}', [BackController::class, 'editAboutTitles']);
+Route::post('updateAboutTitles/{id}', [BackController::class, 'updateAboutTitles']);
+Route::post('/destroyAboutTitles/{id}', [BackController::class, 'destroyAboutTitles']);
+Route::post('/destroyAllAboutTitles', [BackController::class, 'destroyAllAboutTitles']);
