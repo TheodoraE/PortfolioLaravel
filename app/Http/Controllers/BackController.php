@@ -50,7 +50,7 @@ class BackController extends Controller
         $aboutInterests = AboutInterest::all();
 
         // Resume
-        $resumeTitle = ResumeTitle::all();
+        $resumeTitles = ResumeTitle::all();
         $resumePresentation = ResumePresentation::all();
         $resumeTitles2 = ResumeTitle2::all();
         $resumeInfos = ResumeInfo::all();
@@ -58,16 +58,16 @@ class BackController extends Controller
         $resumeProfessionals = ResumeProfessional::all();
 
         // Portfolio
-        $portfolioTitle = PortfolioTitle::all();
+        $portfolioTitles = PortfolioTitle::all();
         $portfolioFilters = PortfolioFilter::all();
         $portfolioDivs = PortfolioDiv::all();
 
         // Contact
-        $contactTitle = ContactTitle::all();
+        $contactTitles = ContactTitle::all();
         $contactCards = ContactCard::all();
         // $contactCount = 0;
 
-        return view('backoffice.backoffice', compact('navLinks', 'socialLinks', 'homeTitle', 'homeTitle2', 'aboutTitles', 'aboutMeImg', 'aboutMeContent', 'aboutMeInfos', 'aboutCounts', 'aboutSkills', 'aboutInterests', 'resumeTitle', 'resumePresentation', 'resumeTitles2', 'resumeInfos', 'resumeEducations', 'resumeProfessionals', 'portfolioTitle', 'portfolioFilters', 'portfolioDivs', 'contactTitle', 'contactCards'));
+        return view('backoffice.backoffice', compact('navLinks', 'socialLinks', 'homeTitle', 'homeTitle2', 'aboutTitles', 'aboutMeImg', 'aboutMeContent', 'aboutMeInfos', 'aboutCounts', 'aboutSkills', 'aboutInterests', 'resumeTitles', 'resumePresentation', 'resumeTitles2', 'resumeInfos', 'resumeEducations', 'resumeProfessionals', 'portfolioTitles', 'portfolioFilters', 'portfolioDivs', 'contactTitles', 'contactCards'));
     }
 
 
@@ -95,6 +95,22 @@ class BackController extends Controller
     public function createAboutInterests()
     {
         return view('backoffice.pages.create.createAboutInterests');
+    }
+    public function createResumeTitles()
+    {
+        return view('backoffice.pages.create.createResumeTitles');
+    }
+    public function createResumeTitles2()
+    {
+        return view('backoffice.pages.create.createResumeTitles2');
+    }
+    public function createResumeInfos()
+    {
+        return view('backoffice.pages.create.createResumeInfos');
+    }
+    public function createResumeEducations()
+    {
+        return view('backoffice.pages.create.createResumeEducations');
     }
     
 
@@ -187,6 +203,57 @@ class BackController extends Controller
         $store->save();
         return redirect()->back();
     }
+    public function storeResumeTitles(Request $request)
+    {
+        $validation = $request->validate([
+            "title" => 'required',
+        ]);
+
+        $store = new ResumeTitle;
+        $store->title = $request->title;
+        $store->para = $request->para;
+        $store->save();
+        return redirect()->back();
+    }
+    public function storeResumeTitles2(Request $request)
+    {
+        $validation = $request->validate([
+            "title" => 'required',
+        ]);
+
+        $store = new ResumeTitle2;
+        $store->title = $request->title;
+        $store->save();
+        return redirect()->back();
+    }
+    public function storeResumeInfos(Request $request)
+    {
+        $validation = $request->validate([
+            "info" => 'required',
+        ]);
+
+        $store = new ResumeInfo;
+        $store->info = $request->info;
+        $store->save();
+        return redirect()->back();
+    }
+    public function storeResumeEducations(Request $request)
+    {
+        $validation = $request->validate([
+            "title" => 'required',
+            "date" => 'required',
+            "institution" => 'required',
+            "description" => 'required',
+        ]);
+
+        $store = new ResumeEducation;
+        $store->title = $request->title;
+        $store->date = $request->date;
+        $store->institution = $request->institution;
+        $store->description = $request->description;
+        $store->save();
+        return redirect()->back();
+    }
 
 
 
@@ -220,6 +287,26 @@ class BackController extends Controller
     {
         $show = AboutInterest::find($id);
         return view('backoffice.pages.show.showAboutInterests', compact('show'));
+    }
+    public function showResumeTitles($id)
+    {
+        $show = ResumeTitle::find($id);
+        return view('backoffice.pages.show.showResumeTitles', compact('show'));
+    }
+    public function showResumeTitles2($id)
+    {
+        $show = ResumeTitle2::find($id);
+        return view('backoffice.pages.show.showResumeTitles2', compact('show'));
+    }
+    public function showResumeInfos($id)
+    {
+        $show = ResumeInfo::find($id);
+        return view('backoffice.pages.show.showResumeInfos', compact('show'));
+    }
+    public function showResumeEducations($id)
+    {
+        $show = ResumeEducation::find($id);
+        return view('backoffice.pages.show.showResumeEducations', compact('show'));
     }
 
 
@@ -255,6 +342,26 @@ class BackController extends Controller
     {
         $edit = AboutInterest::find($id);
         return view('backoffice.pages.edit.editAboutInterests', compact('edit'));
+    }
+    public function editResumeTitles($id)
+    {
+        $edit = ResumeTitle::find($id);
+        return view('backoffice.pages.edit.editResumeTitles', compact('edit'));
+    }
+    public function editResumeTitles2($id)
+    {
+        $edit = ResumeTitle2::find($id);
+        return view('backoffice.pages.edit.editResumeTitles2', compact('edit'));
+    }
+    public function editResumeInfos($id)
+    {
+        $edit = ResumeInfo::find($id);
+        return view('backoffice.pages.edit.editResumeInfos', compact('edit'));
+    }
+    public function editResumeEducations($id)
+    {
+        $edit = ResumeEducation::find($id);
+        return view('backoffice.pages.edit.editResumeEducations', compact('edit'));
     }
 
 
@@ -349,8 +456,58 @@ class BackController extends Controller
         $update->save();
         return redirect('/backoffice');
     }
+    public function updateResumeTitles(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "title" => 'required',
+        ]);
 
+        $update = ResumeTitle::find($id);
+        $update->title = $request->title;
+        $update->para = $request->para;
+        $update->save();
+        return redirect('/backoffice');
+    }
+    public function updateResumeTitles2(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "title" => 'required',
+        ]);
 
+        $update = ResumeTitle2::find($id);
+        $update->title = $request->title;
+        $update->save();
+        return redirect('/backoffice');
+    }
+    public function updateResumeInfos(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "info" => 'required',
+        ]);
+
+        $update = ResumeInfo::find($id);
+        $update->info = $request->info;
+        $update->save();
+        return redirect('/backoffice');
+    }
+    public function updateResumeEducations(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "title" => 'required',
+            "date" => 'required',
+            "institution" => 'required',
+            "description" => 'required',
+        ]);
+
+        $update = ResumeEducation::find($id);
+        $update->title = $request->title;
+        $update->date = $request->date;
+        $update->institution = $request->institution;
+        $update->description = $request->description;
+        $update->save();
+        return redirect('/backoffice');
+    }
+    
 
 
     ////  DESTROY
@@ -390,7 +547,30 @@ class BackController extends Controller
         $destroy->delete();
         return redirect('/backoffice');
     }
-
+    public function destroyResumeTitles($id)
+    {
+        $destroy = ResumeTitle::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
+    public function destroyResumeTitles2($id)
+    {
+        $destroy = ResumeTitle2::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
+    public function destroyResumeInfos($id)
+    {
+        $destroy = ResumeInfo::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
+    public function destroyResumeEducations($id)
+    {
+        $destroy = ResumeEducation::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
 
 
 
@@ -443,5 +623,38 @@ class BackController extends Controller
         };
         return redirect('/backoffice');
     }
+    public function destroyAllResumeTitles()
+    {
+        $destroyALL = ResumeTitle::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
+    public function destroyAllResumeTitles2()
+    {
+        $destroyALL = ResumeTitle2::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
+    public function destroyAllResumeInfos()
+    {
+        $destroyALL = ResumeInfo::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
+    public function destroyAllResumeEducations()
+    {
+        $destroyALL = ResumeEducation::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
+
 
 }

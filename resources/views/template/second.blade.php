@@ -36,6 +36,18 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/backoffice#aboutInterests">About Interests</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/backoffice#resumeTitles">Resume Titles</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/backoffice#resumeTitles2">Resume Subtitles</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/backoffice#resumeInfos">Resume Infos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/backoffice#resumeEducations">Resume Education</a>
+                </li>
               </ul>
             </div>
         </nav>
