@@ -19,6 +19,8 @@
         @include('backoffice.partials.portfolioFilters')
         @include('backoffice.partials.portfolioDivs')
 
-
+        @include('backoffice.partials.contactTitles')
+        @include('backoffice.partials.contactCards')
+        
     </section>
 @endsection

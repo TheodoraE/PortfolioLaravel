@@ -57,6 +57,12 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/backoffice#portfolioDivs">Portfolio Divs</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/backoffice#contactTitles">Contact Titles</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/backoffice#contactCards">Contact Cards</a>
+                </li>
               </ul>
             </div>
         </nav>

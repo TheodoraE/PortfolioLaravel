@@ -124,6 +124,14 @@ class BackController extends Controller
     {
         return view('backoffice.pages.create.createPortfolioDivs');
     }
+    public function createContactTitles()
+    {
+        return view('backoffice.pages.create.createContactTitles');
+    }
+    public function createContactCards()
+    {
+        return view('backoffice.pages.create.createContactCards');
+    }
 
 
 
@@ -313,6 +321,33 @@ class BackController extends Controller
         $store->save();
         return redirect()->back();
     }
+    public function storeContactTitles(Request $request)
+    {
+        $validation = $request->validate([
+            "title" => 'required',
+        ]);
+
+        $store = new ContactTitle;
+        $store->title = $request->title;
+        $store->para = $request->para;
+        $store->save();
+        return redirect()->back();
+    }
+    public function storeContactCards(Request $request)
+    {
+        $validation = $request->validate([
+            "iClass" => 'required',
+            "title" => 'required',
+        ]);
+
+        $store = new ContactCard;
+        $store->divColClass = $request->divColClass;
+        $store->iClass = $request->iClass;
+        $store->title = $request->title;
+        $store->description = $request->description;
+        $store->save();
+        return redirect()->back();
+    }
 
 
 
@@ -384,6 +419,16 @@ class BackController extends Controller
         $show = PortfolioDiv::find($id);
         return view('backoffice.pages.show.showPortfolioDivs', compact('show'));
     }
+    public function showContactTitles($id)
+    {
+        $show = ContactTitle::find($id);
+        return view('backoffice.pages.show.showContactTitles', compact('show'));
+    }
+    public function showContactCards($id)
+    {
+        $show = ContactCard::find($id);
+        return view('backoffice.pages.show.showContactCards', compact('show'));
+    }
 
 
 
@@ -453,6 +498,16 @@ class BackController extends Controller
     {
         $edit = PortfolioDiv::find($id);
         return view('backoffice.pages.edit.editPortfolioDivs', compact('edit'));
+    }
+    public function editContactTitles($id)
+    {
+        $edit = ContactTitle::find($id);
+        return view('backoffice.pages.edit.editContactTitles', compact('edit'));
+    }
+    public function editContactCards($id)
+    {
+        $edit = ContactCard::find($id);
+        return view('backoffice.pages.edit.editContactCards', compact('edit'));
     }
 
 
@@ -647,7 +702,32 @@ class BackController extends Controller
 
         $store = new PortfolioFilter;        
     }
-    
+    public function updateContactTitles(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "title" => 'required',
+        ]);
+
+        $update = ContactTitle::find($id);
+        $update->title = $request->title;
+        $update->para = $request->para;
+        $update->save();
+        return redirect('/backoffice');
+    }
+    public function updateContactCards(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "iClass" => 'required',
+            "title" => 'required',
+        ]);
+
+        $update = ContactCard::find($id);
+        $update->divColClass = $request->divColClass;
+        $update->iClass = $request->iClass;
+        $update->title = $request->title;
+        $update->description = $request->description;
+        return redirect('/backoffice');
+    }
 
 
 
@@ -728,6 +808,18 @@ class BackController extends Controller
     public function destroyPortfolioDivs($id)
     {
         $destroy = PortfolioDiv::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
+    public function destroyContactTitles($id)
+    {
+        $destroy = ContactTitle::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
+    public function destroyContactCards($id)
+    {
+        $destroy = ContactCard::find($id);
         $destroy->delete();
         return redirect('/backoffice');
     }
@@ -835,6 +927,22 @@ class BackController extends Controller
     public function destroyAllPortfolioDivs()
     {
         $destroyALL = PortfolioDiv::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
+    public function destroyAllContactTitles()
+    {
+        $destroyALL = ContactTitle::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
+    public function destroyAllContactCards()
+    {
+        $destroyALL = ContactCard::all();
         foreach ($destroyALL as $destroy) {
             $destroy->delete();
         };

@@ -125,3 +125,19 @@ Route::get('/editPortfolioDivs/{id}', [BackController::class, 'editPortfolioDivs
 Route::post('updatePortfolioDivs/{id}', [BackController::class, 'updatePortfolioDivs']);
 Route::post('/destroyPortfolioDivs/{id}', [BackController::class, 'destroyPortfolioDivs']);
 Route::post('/destroyAllPortfolioDivs', [BackController::class, 'destroyAllPortfolioDivs']);
+    // Contact Titles
+Route::get('/createContactTitles', [BackController::class, 'createContactTitles']);
+Route::post('/storeContactTitles', [BackController::class, 'storeContactTitles']);
+Route::get('/showContactTitles/{id}', [BackController::class, 'showContactTitles']);
+Route::get('/editContactTitles/{id}', [BackController::class, 'editContactTitles']);
+Route::post('updateContactTitles/{id}', [BackController::class, 'updateContactTitles']);
+Route::post('/destroyContactTitles/{id}', [BackController::class, 'destroyContactTitles']);
+Route::post('/destroyAllContactTitles', [BackController::class, 'destroyAllContactTitles']);
+    // Contact Cards
+Route::get('/createContactCards', [BackController::class, 'createContactCards']);
+Route::post('/storeContactCards', [BackController::class, 'storeContactCards']);
+Route::get('/showContactCards/{id}', [BackController::class, 'showContactCards']);
+Route::get('/editContactCards/{id}', [BackController::class, 'editContactCards']);
+Route::post('updateContactCards/{id}', [BackController::class, 'updateContactCards']);
+Route::post('/destroyContactCards/{id}', [BackController::class, 'destroyContactCards']);
+Route::post('/destroyAllContactCards', [BackController::class, 'destroyAllContactCards']);
