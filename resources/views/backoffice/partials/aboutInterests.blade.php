@@ -1,11 +1,11 @@
-<div id="aboutTitles" class="bg-light my-5 p-2">
+<div id="aboutInterests" class="bg-light my-5 p-2">
     <div>
-        <h1 class="m-3">About Titles</h1>
+        <h1 class="m-3">About Interests</h1>
         <div class="w-25 d-flex justify-content-around my-2">
             {{-- Create --}}
-            <a href="/createAboutTitles" class="btn btn-success">ADD</a>
+            <a href="/createAboutInterests" class="btn btn-success">ADD</a>
             {{-- Delete All --}}
-            <form action="/destroyAllAboutTitles" method="POST">
+            <form action="/destroyAllAboutInterests" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-dark">DELETE ALL</button>
             </form>
@@ -15,8 +15,10 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Title</th>
-                <th scope="col">Text</th>
+                {{-- <th scope="col">Margin</th> --}}
+                <th scope="col">Icon</th>
+                {{-- <th scope="col">Color</th> --}}
+                <th scope="col">Description</th>
                 {{-- Show --}}
                 <th scope="col"> </th>
                 {{-- Edit --}}
@@ -26,22 +28,24 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($aboutTitles as $link)
+            @foreach ($aboutInterests as $link)
             <tr>
                 <th scope="row">{{$link->id}}</th>
-                <td>{{$link->title}}</td>
-                <td>{{$link->para}}</td>
+                {{-- <td>{{$link->divColClass}}</td> --}}
+                <td>{{$link->iClass}}</td>
+                {{-- <td>{{$link->iColor}}</td> --}}
+                <td>{{$link->description}}</td>
                 <td>
                     {{-- Show --}}
-                    <a href="/showAboutTitles/{{$link->id}}" class="btn btn-primary">SHOW</a>
+                    <a href="/showAboutInterests/{{$link->id}}" class="btn btn-primary">SHOW</a>
                 </td>
                 <td>
                     {{-- Edit --}}
-                    <a href="/editAboutTitles/{{$link->id}}" class="btn btn-warning">EDIT</a>
+                    <a href="/editAboutInterests/{{$link->id}}" class="btn btn-warning">EDIT</a>
                 </td>
                 <td>
                     {{-- Delete --}}
-                    <form action="/destroyAboutTitles/{{$link->id}}" method="POST">
+                    <form action="/destroyAboutInterests/{{$link->id}}" method="POST">
                         @csrf
                         <button type="submit" class="btn btn-danger">DELETE</button>
                     </form>

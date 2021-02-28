@@ -6,5 +6,7 @@
         @include('backoffice.partials.socialLinks')
         @include('backoffice.partials.aboutTitles')
         @include('backoffice.partials.aboutCounts')
+        @include('backoffice.partials.aboutSkills')
+        @include('backoffice.partials.aboutInterests')
     </section>
 @endsection

@@ -1,11 +1,11 @@
-<div id="aboutTitles" class="bg-light my-5 p-2">
+<div id="aboutSkills" class="bg-light my-5 p-2">
     <div>
-        <h1 class="m-3">About Titles</h1>
+        <h1 class="m-3">About Skills</h1>
         <div class="w-25 d-flex justify-content-around my-2">
             {{-- Create --}}
-            <a href="/createAboutTitles" class="btn btn-success">ADD</a>
+            <a href="/createAboutSkills" class="btn btn-success">ADD</a>
             {{-- Delete All --}}
-            <form action="/destroyAllAboutTitles" method="POST">
+            <form action="/destroyAllAboutSkills" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-dark">DELETE ALL</button>
             </form>
@@ -15,8 +15,9 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Title</th>
-                <th scope="col">Text</th>
+                <th scope="col">Skill</th>
+                <th scope="col">Level</th>
+                {{-- <th scope="col">Value</th> --}}
                 {{-- Show --}}
                 <th scope="col"> </th>
                 {{-- Edit --}}
@@ -26,22 +27,23 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($aboutTitles as $link)
+            @foreach ($aboutSkills as $link)
             <tr>
                 <th scope="row">{{$link->id}}</th>
-                <td>{{$link->title}}</td>
-                <td>{{$link->para}}</td>
+                <td>{{$link->skill}}</td>
+                <td>{{$link->iValue}}</td>
+                {{-- <td>{{$link->ariaValue}}</td> --}}
                 <td>
                     {{-- Show --}}
-                    <a href="/showAboutTitles/{{$link->id}}" class="btn btn-primary">SHOW</a>
+                    <a href="/showAboutSkills/{{$link->id}}" class="btn btn-primary">SHOW</a>
                 </td>
                 <td>
                     {{-- Edit --}}
-                    <a href="/editAboutTitles/{{$link->id}}" class="btn btn-warning">EDIT</a>
+                    <a href="/editAboutSkills/{{$link->id}}" class="btn btn-warning">EDIT</a>
                 </td>
                 <td>
                     {{-- Delete --}}
-                    <form action="/destroyAboutTitles/{{$link->id}}" method="POST">
+                    <form action="/destroyAboutSkills/{{$link->id}}" method="POST">
                         @csrf
                         <button type="submit" class="btn btn-danger">DELETE</button>
                     </form>

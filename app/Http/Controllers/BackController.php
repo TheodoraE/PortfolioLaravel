@@ -84,6 +84,18 @@ class BackController extends Controller
     {
         return view('backoffice.pages.create.createAboutTitles');
     }
+    public function createAboutCounts()
+    {
+        return view('backoffice.pages.create.createAboutCounts');
+    }
+    public function createAboutSkills()
+    {
+        return view('backoffice.pages.create.createAboutSkills');
+    }
+    public function createAboutInterests()
+    {
+        return view('backoffice.pages.create.createAboutInterests');
+    }
     
 
 
@@ -120,12 +132,58 @@ class BackController extends Controller
     {
         $validation = $request->validate([
             "title" => 'required',
-            "para" => 'required',
         ]);
 
         $store = new AboutTitle;
         $store->title = $request->title;
         $store->para = $request->para;
+        $store->save();
+        return redirect()->back();
+    }
+    public function storeAboutCounts(Request $request)
+    {
+        $validation = $request->validate([
+            "iClass" => 'required',
+            "number" => 'integer',
+            "description" => 'required'
+        ]);
+
+        $store = new AboutCount;
+        $store->divColClass = $request->divColClass;
+        $store->iClass = $request->iClass;
+        $store->number = $request->number;
+        $store->description = $request->description;
+        $store->save();
+        return redirect()->back();
+    }
+    public function storeAboutSkills(Request $request)
+    {
+        $validation = $request->validate([
+            "skill" => 'required',
+            "iValue" => 'required',
+            "ariaValue" => 'integer'
+        ]);
+
+        $store = new AboutSkill;
+        $store->skill = $request->skill;
+        $store->iValue = $request->iValue;
+        $store->ariaValue = $request->ariaValue;
+        $store->save();
+        return redirect()->back();
+    }
+    public function storeAboutInterests(Request $request)
+    {
+        $validation = $request->validate([
+            "iClass" => 'required',
+            "iColor" => 'required',
+            "description" => 'required'
+        ]);
+
+        $store = new AboutInterest;
+        $store->divColClass = $request->divColClass;
+        $store->iClass = $request->iClass;
+        $store->iColor = $request->iColor;
+        $store->description = $request->description;
         $store->save();
         return redirect()->back();
     }
@@ -148,6 +206,21 @@ class BackController extends Controller
         $show = AboutTitle::find($id);
         return view('backoffice.pages.show.showAboutTitles', compact('show'));
     }
+    public function showAboutCounts($id)
+    {
+        $show = AboutCount::find($id);
+        return view('backoffice.pages.show.showAboutCounts', compact('show'));
+    }
+    public function showAboutSkills($id)
+    {
+        $show = AboutSkill::find($id);
+        return view('backoffice.pages.show.showAboutSkills', compact('show'));
+    }
+    public function showAboutInterests($id)
+    {
+        $show = AboutInterest::find($id);
+        return view('backoffice.pages.show.showAboutInterests', compact('show'));
+    }
 
 
 
@@ -156,21 +229,34 @@ class BackController extends Controller
     public function editNavLinks($id)
     {
         $edit = Navlink::find($id);
-
         return view('backoffice.pages.edit.editNavLinks', compact('edit'));
     }
     public function editSocialLinks($id)
     {
         $edit = SocialLink::find($id);
-
         return view('backoffice.pages.edit.editSocialLinks', compact('edit'));
     }
     public function editAboutTitles($id)
     {
         $edit = AboutTitle::find($id);
-
         return view('backoffice.pages.edit.editAboutTitles', compact('edit'));
     }
+    public function editAboutCounts($id)
+    {
+        $edit = AboutCount::find($id);
+        return view('backoffice.pages.edit.editAboutCounts', compact('edit'));
+    }
+    public function editAboutSkills($id)
+    {
+        $edit = AboutSkill::find($id);
+        return view('backoffice.pages.edit.editAboutSkills', compact('edit'));
+    }
+    public function editAboutInterests($id)
+    {
+        $edit = AboutInterest::find($id);
+        return view('backoffice.pages.edit.editAboutInterests', compact('edit'));
+    }
+
 
 
 
@@ -208,12 +294,58 @@ class BackController extends Controller
     {
         $validation = $request->validate([
             "title" => 'required',
-            "para" => 'required'
         ]);
 
         $update = AboutTitle::find($id);
         $update->title = $request->title;
         $update->para = $request->para;
+        $update->save();
+        return redirect('/backoffice');
+    }
+    public function updateAboutCounts(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "iClass" => 'required',
+            "number" => 'integer',
+            "description" => 'required'
+        ]);
+
+        $update = AboutCount::find($id);
+        $update->divColClass = $request->divColClass;
+        $update->iClass = $request->iClass;
+        $update->number = $request->number;
+        $update->description = $request->description;
+        $update->save();
+        return redirect('/backoffice');
+    }
+    public function updateAboutSkills(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "skill" => 'required',
+            "iValue" => 'required',
+            "ariaValue" => 'integer'
+        ]);
+
+        $update = AboutSkill::find($id);
+        $update->skill = $request->skill;
+        $update->iValue = $request->iValue;
+        $update->ariaValue = $request->ariaValue;
+        $update->save();
+        return redirect('/backoffice');
+    }
+    public function updateAboutInterests(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "iClass" => 'required',
+            "iColor" => 'required',
+            "description" => 'required'
+        ]);
+
+        $update = AboutInterest::find($id);
+        $update->divColClass = $request->divColClass;
+        $update->iClass = $request->iClass;
+        $update->iColor = $request->iColor;
+        $update->description = $request->description;
         $update->save();
         return redirect('/backoffice');
     }
@@ -240,6 +372,26 @@ class BackController extends Controller
         $destroy->delete();
         return redirect('/backoffice');
     }
+    public function destroyAboutCounts($id)
+    {
+        $destroy = AboutCount::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
+    public function destroyAboutSkills($id)
+    {
+        $destroy = AboutSkill::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
+    public function destroyAboutInterests($id)
+    {
+        $destroy = AboutInterest::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
+
+
 
 
     //// DESTROYALL
@@ -262,6 +414,30 @@ class BackController extends Controller
     public function destroyAllAboutTitles()
     {
         $destroyALL = AboutTitle::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
+    public function destroyAllAboutCounts()
+    {
+        $destroyALL = AboutCount::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
+    public function destroyAllAboutSkills()
+    {
+        $destroyALL = AboutSkill::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
+    public function destroyAllAboutInterests()
+    {
+        $destroyALL = AboutInterest::all();
         foreach ($destroyALL as $destroy) {
             $destroy->delete();
         };

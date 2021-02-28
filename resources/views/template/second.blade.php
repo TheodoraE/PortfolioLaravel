@@ -30,6 +30,12 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/backoffice#aboutCounts">About Counts</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/backoffice#aboutSkills">About Skills</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/backoffice#aboutInterests">About Interests</a>
+                </li>
               </ul>
             </div>
         </nav>
