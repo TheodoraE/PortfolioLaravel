@@ -19,26 +19,26 @@ class AboutCountSeeder extends Seeder
                 [
                     'divColClass' => "",
                     'iClass' => "icofont-simple-smile",
-                    'number' => 232,
-                    'description' => "Happy Clients"
+                    'number' => 6,
+                    'description' => "Months Of Experience"
                 ],
                 [
                     'divColClass' => "mt-5 mt-md-0",
                     'iClass' => "icofont-document-folder",
-                    'number' => 521,
-                    'description' => "Projects"
+                    'number' => 20,
+                    'description' => "Projects Ended"
                 ],
                 [
-                    'divColClass' => "mt-5 mt-lg-0",
+                    'divColClass' => "mt-5 mt-lg-0 p-0",
                     'iClass' => "icofont-live-support",
-                    'number' => 1463,
-                    'description' => "Hours Of Support"
+                    'number' => 30,
+                    'description' => "Average Coding Hours/Week"
                 ],
                 [
                     'divColClass' => "mt-5 mt-lg-0",
                     'iClass' => "icofont-users-alt-5",
-                    'number' => 15,
-                    'description' => "Hard Workers"
+                    'number' => 3,
+                    'description' => "Languages Learned"
                 ]
             ]
         );

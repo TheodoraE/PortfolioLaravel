@@ -17,24 +17,31 @@ class ResumeProfessionalSeeder extends Seeder
         DB::table('resume_professionals')->insert(
             [
                 [
-                    'title' => "Senior graphic design specialist",
-                    'date' => "2019 - Present",
-                    'institution' => "Experion, New York, NY",
-                    'task1' => "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
-                    'task2' => "Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project.",
-                    'task3' => "Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design",
-                    'task4' => "Oversee the efficient use of production project budgets ranging from $2,000 - $25,000",
-                    'task5' => "",
+                    'title' => "Resourcer Intern",
+                    'date' => "February 2020 - May 2020",
+                    'institution' => "Modis Belgium – Modis IT & Engineering, Grand-Bigard",
+                    'task1' => "Search of the different IT profiles and the redaction of IT
+                    basics documentation",
+                    'task2' => "Search of specific candidates according to client’s criteria
+                    on many platforms (websites and databases) and the
+                    correspondence by phone and by mail",
+                    'task3' => "Search of companies in need of candidates and the creation
+                    of a list for the Business Manager",
+                    'task4' => "Creating candidates’ profiles in Modis’ database and
+                    creating companies accounts in Adecco’s database
+                    (Salesforce)",
+                    'task5' => "Updating my Excel file containing all the researches’ results
+                    (clients, contacts and job offer)",
                     'task6' => ""
                 ],
                 [
-                    'title' => "Graphic design specialist",
-                    'date' => "2017 - 2018",
-                    'institution' => "Stepping Stone Advertising, New York, NY",
-                    'task1' => "Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).",
-                    'task2' => "Managed up to 5 projects or tasks at a given time while under pressure",
-                    'task3' => "Recommended and consulted with clients on the most appropriate graphic design",
-                    'task4' => "Created 4+ design presentations and proposals a month for clients and account managers",
+                    'title' => "Administration Intern",
+                    'date' => "May 2018",
+                    'institution' => "AWEX – Directorate for Financial Incentives, Brussels",
+                    'task1' => "Assistance in controlling incoming files",
+                    'task2' => "File analysis, mail writing",
+                    'task3' => "Excel database updating, mail archiving, graphics creation and getting the tasks done by following the database.",
+                    'task4' => "Online currency searches",
                     'task5' => "",
                     'task6' => ""
                 ]

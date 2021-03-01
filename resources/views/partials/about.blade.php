@@ -78,9 +78,9 @@
             </div>
             <span style="display: none">{{$skillcount++}}</span>
 
-            @if ($loop->iteration %3 == 0)
+            @if ($loop->iteration %4 == 0)
               </div>
-              @if ($skillcount<6)
+              @if ($skillcount<8)
                 <div class="col-lg-6">
               @endif  
             @endif

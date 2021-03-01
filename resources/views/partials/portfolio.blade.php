@@ -28,7 +28,7 @@
                 <p>{{$div->description}}</p>
                 <div class="portfolio-links">
                   <a href="{{asset($div->imgsrc)}}" data-gall="portfolioGallery" class="venobox" title="{{$div->a1Title}}"><i class="bx bx-plus"></i></a>
-                  <a href="{{$div->a2href}}" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="{{$div->a2href}}" target="_blank" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>

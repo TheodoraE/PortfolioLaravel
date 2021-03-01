@@ -18,13 +18,13 @@ class AboutSkillSeeder extends Seeder
             [
                 [
                     'skill' => "HTML",
-                    'iValue' => "100%",
-                    'ariaValue' => 100
-                ],
-                [
-                    'skill' => "CSS",
                     'iValue' => "90%",
                     'ariaValue' => 90
+                ],
+                [
+                    'skill' => "CSS/SASS/Bootstrap",
+                    'iValue' => "85%",
+                    'ariaValue' => 85
                 ],
                 [
                     'skill' => "JavaScript",
@@ -32,19 +32,29 @@ class AboutSkillSeeder extends Seeder
                     'ariaValue' => 75
                 ],
                 [
-                    'skill' => "PHP",
-                    'iValue' => "80%",
-                    'ariaValue' => 80
+                    'skill' => "React",
+                    'iValue' => "60%",
+                    'ariaValue' => 60
                 ],
                 [
-                    'skill' => "WordPress/CMS",
+                    'skill' => "Laravel",
+                    'iValue' => "70%",
+                    'ariaValue' => 70
+                ],
+                [
+                    'skill' => "MySql",
+                    'iValue' => "65%",
+                    'ariaValue' => 65
+                ],
+                [
+                    'skill' => "GitHub",
+                    'iValue' => "85%",
+                    'ariaValue' => 85
+                ],
+                [
+                    'skill' => "Chrome Inspector",
                     'iValue' => "90%",
                     'ariaValue' => 90
-                ],
-                [
-                    'skill' => "Photoshop",
-                    'iValue' => "55%",
-                    'ariaValue' => 55
                 ]
             ]
         );

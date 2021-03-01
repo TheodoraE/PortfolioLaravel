@@ -17,16 +17,16 @@ class ResumeEducationSeeder extends Seeder
         DB::table('resume_education')->insert(
             [
                 [
-                    'title' => "Master of Fine Arts & Graphic Design",
-                    'date' => "2015 - 2016",
-                    'institution' => "Rochester Institute of Technology, Rochester, NY",
-                    'description' => "Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend"
+                    'title' => "Full Stack Web Developer",
+                    'date' => "September 2020 - April 2021",
+                    'institution' => "Coding School | MolenGeek",
+                    'description' => "Training of 6 intensive months to become a Full stack Web Developer"
                 ],
                 [
-                    'title' => "Bachelor of Fine Arts & Graphic Design",
-                    'date' => "2010 - 2014",
-                    'institution' => "Rochester Institute of Technology, Rochester, NY",
-                    'description' => "Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila"
+                    'title' => "Bachelor Management Assistant",
+                    'date' => "2017 - 2020",
+                    'institution' => "Haute Ecole Galilée ECSEDI-ISALT, Bruxelles",
+                    'description' => "Bachelor in Management Assistant, option languages and management"
                 ]
             ]
         );

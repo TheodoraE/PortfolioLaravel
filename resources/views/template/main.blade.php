@@ -63,6 +63,7 @@
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <p>Personnalised by CreaTid</p>
     </div>
     
       <!-- Vendor JS Files -->

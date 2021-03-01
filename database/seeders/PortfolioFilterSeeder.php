@@ -21,16 +21,16 @@ class PortfolioFilterSeeder extends Seeder
                     'name' => "All"
                 ],
                 [
-                    'data' => ".filter-app",
-                    'name' => "App"
+                    'data' => ".filter-front",
+                    'name' => "Front"
                 ],
                 [
-                    'data' => ".filter-card",
-                    'name' => "Card"
+                    'data' => ".filter-back",
+                    'name' => "Back"
                 ],
                 [
-                    'data' => ".filter-web",
-                    'name' => "Web"
+                    'data' => ".filter-personal",
+                    'name' => "Personal"
                 ]
             ]
         );

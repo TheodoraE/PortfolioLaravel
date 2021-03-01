@@ -17,9 +17,9 @@ class AboutMeContentSeeder extends Seeder
         DB::table('about_me_contents')->insert(
             [
                 [
-                    'title' => "UI/UX & Graphic Designer",
-                    'description' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    'text' => "Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores."
+                    'title' => "Junior FullStack Web developer",
+                    'description' => "Young problem solver oriented Web Developer eager to learn and create fun websites / JavaScript Games",
+                    'text' => "Freshly graduated Management Assistant, I decided to challenge myself and learn programming. I have found myself found of coding and especially of JavaScript. On my free time, I develop games, calculators and potential effective apps. My qualities are JavaScript and Laravel. I code on Ubuntu environment."
                 ]
             ]
         );

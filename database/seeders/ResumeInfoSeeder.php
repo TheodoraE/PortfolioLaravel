@@ -17,13 +17,13 @@ class ResumeInfoSeeder extends Seeder
         DB::table('resume_infos')->insert(
             [
                 [
-                    'info' => "Portland par 127,Orlando, FL"
+                    'info' => "Berchem-Sainte-Agathe, 1082 Brussels"
                 ],
                 [
-                    'info' => "(123) 456-7891"
+                    'info' => "(32) 471 24 36"
                 ],
                 [
-                    'info' => "alice.barkley@example.com"
+                    'info' => "theodora.ergun@hotmail.com"
                 ]
             ]
         );

@@ -20,7 +20,7 @@ class ContactCardSeeder extends Seeder
                     'divColClass' => "",
                     'iClass' => "bx bx-map",
                     'title' => "My Address",
-                    'description' => "A108 Adam Street, New York, NY 535022"
+                    'description' => "Berchem-Sainte-Agathe, 1082 Brussels"
                 ],
                 [
                     'divColClass' => "mt-4 mt-md-0",
@@ -32,13 +32,13 @@ class ContactCardSeeder extends Seeder
                     'divColClass' => "mt-4",
                     'iClass' => "bx bx-envelope",
                     'title' => "Email Me",
-                    'description' => "contact@example.com"
+                    'description' => "theodora.ergun@hotmail.com"
                 ],
                 [
                     'divColClass' => "mt-4",
                     'iClass' => "bx bx-phone-call",
                     'title' => "Call Me",
-                    'description' => "+1 5589 55488 55"
+                    'description' => "+32 471 24 36 33"
                 ]
             ]
         );

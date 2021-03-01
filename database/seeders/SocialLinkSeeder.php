@@ -37,7 +37,7 @@ class SocialLinkSeeder extends Seeder
                     'iClass' => "icofont-skype"
                 ],
                 [
-                    'href' => "https://www.linkedin.com/",
+                    'href' => "http://www.linkedin.com/in/theodora-ergun-872753152",
                     'aClass' => "linkedin",
                     'iClass' => "icofont-linkedin"
                 ]

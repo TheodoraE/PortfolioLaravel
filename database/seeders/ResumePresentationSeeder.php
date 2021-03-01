@@ -17,8 +17,8 @@ class ResumePresentationSeeder extends Seeder
         DB::table('resume_presentations')->insert(
             [
                 [
-                    'name' => "Alice Barkley",
-                    'text' => "Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable."
+                    'name' => "Theodora Ergun",
+                    'text' => "Young problem solver oriented Web Developer eager to learn and create fun websites / JavaScript Games."
                 ]
             ]
         );

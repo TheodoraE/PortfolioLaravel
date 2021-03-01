@@ -19,37 +19,37 @@ class AboutMeInfoSeeder extends Seeder
                 [
                     'icon' => "icofont-rounded-right",
                     'title' => "Birthday:",
-                    'text' => "1 May 1995"
+                    'text' => "24 November 1997"
                 ],
                 [
                     'icon' => "icofont-rounded-right",
-                    'title' => "Website:",
-                    'text' => "www.example.com"
+                    'title' => "GitHub:",
+                    'text' => "https://github.com/TheodoraE"
                 ],
                 [
                     'icon' => "icofont-rounded-right",
                     'title' => "Phone:",
-                    'text' => "+123 456 7890"
+                    'text' => "+32 471 24 36 33"
                 ],
                 [
                     'icon' => "icofont-rounded-right",
                     'title' => "City:",
-                    'text' => "New York, USA"
+                    'text' => "Brussels, Belgium"
                 ],
                 [
                     'icon' => "icofont-rounded-right",
                     'title' => "Age:",
-                    'text' => "30"
+                    'text' => "23"
                 ],
                 [
                     'icon' => "icofont-rounded-right",
                     'title' => "Degree:",
-                    'text' => "Master"
+                    'text' => "Bachelor"
                 ],
                 [
                     'icon' => "icofont-rounded-right",
                     'title' => "Email",
-                    'text' => "email@example.com"
+                    'text' => "theodora.ergun@hotmail.com"
                 ],
                 [
                     'icon' => "icofont-rounded-right",

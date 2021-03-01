@@ -20,73 +20,73 @@ class AboutInterestSeeder extends Seeder
                     'divColClass' => "",
                     'iClass' => "ri-store-line",
                     'iColor' => "color: #ffbb2c;",
-                    'description' => "Lorem Ipsum"
+                    'description' => "Baking / Cooking"
                 ],
                 [
                     'divColClass' => "mt-4 mt-md-0",
                     'iClass' => "ri-bar-chart-box-line",
                     'iColor' => "color: #5578ff;",
-                    'description' => "Dolor Sitema"
+                    'description' => "Coding"
                 ],
                 [
                     'divColClass' => "mt-4 mt-md-0",
                     'iClass' => "ri-calendar-todo-line",
                     'iColor' => "color: #e80368;",
-                    'description' => "Sed perspiciatis"
+                    'description' => "Organizing"
                 ],
                 [
                     'divColClass' => "mt-4 mt-md-0",
                     'iClass' => "ri-paint-brush-line",
                     'iColor' => "color: #e361ff;",
-                    'description' => "Magni Dolores"
+                    'description' => "Crafting"
                 ],
                 [
                     'divColClass' => "mt-4",
                     'iClass' => "ri-database-2-line",
                     'iColor' => "color: #47aeff;",
-                    'description' => "Nemo Enim"
+                    'description' => "Traveling"
                 ],
                 [
                     'divColClass' => "mt-4",
                     'iClass' => "ri-gradienter-line",
                     'iColor' => "color: #ffa76e;",
-                    'description' => "Eiusmod Tempor"
+                    'description' => "Learning foreign languages"
                 ],
                 [
                     'divColClass' => "mt-4",
                     'iClass' => "ri-file-list-3-line",
                     'iColor' => "color: #11dbcf;",
-                    'description' => "Midela Teren"
+                    'description' => "Reading"
                 ],
                 [
                     'divColClass' => "mt-4",
                     'iClass' => "ri-price-tag-2-line",
                     'iColor' => "color: #4233ff;",
-                    'description' => "Pira Neve"
+                    'description' => "Meditation"
                 ],
                 [
                     'divColClass' => "mt-4",
                     'iClass' => "ri-anchor-line",
                     'iColor' => "color: #b2904f;",
-                    'description' => "Dirada Pack"
+                    'description' => "Taking walks"
                 ],
                 [
                     'divColClass' => "mt-4",
                     'iClass' => "ri-disc-line",
                     'iColor' => "color: #b20969;",
-                    'description' => "Moton Ideal"
+                    'description' => "Enjoying Music"
                 ],
                 [
                     'divColClass' => "mt-4",
                     'iClass' => "ri-base-station-line",
                     'iColor' => "color: #ff5828;",
-                    'description' => "Verdo Park"
+                    'description' => "Asian Culture"
                 ],
                 [
                     'divColClass' => "mt-4",
                     'iClass' => "ri-fingerprint-line",
                     'iColor' => "color: #29cc61;",
-                    'description' => "Flavor Nivelanda"
+                    'description' => "Hiking"
                 ]
             ]
         );
