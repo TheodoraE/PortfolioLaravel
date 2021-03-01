@@ -17,7 +17,7 @@ class AboutMeImageSeeder extends Seeder
         DB::table('about_me_images')->insert(
             [
                 [
-                    'src' => "img/me.jpg",
+                    'src' => "img/TidBW.jpg",
                     'alt' => "picture of me"
                 ]
             ]

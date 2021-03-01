@@ -1,11 +1,11 @@
-<div id="resumeTitles2" class="bg-light pt-3 my-5">
+<div id="aboutMeInfos" class="bg-light pt-3 my-5">
     <div>
-        <h1 class="m-3">Resume Subtitles</h1>
+        <h1 class="m-3">About MeInfos</h1>
         <div class="w-25 d-flex justify-content-around my-2">
             {{-- Create --}}
-            <a href="/createResumeTitles2" class="btn btn-success">ADD</a>
+            <a href="/createAboutMeInfos" class="btn btn-success">ADD</a>
             {{-- Delete All --}}
-            <form action="/destroyAllResumeTitles2" method="POST">
+            <form action="/destroyAllAboutMeInfos" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-dark">DELETE ALL</button>
             </form>
@@ -15,7 +15,9 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
+                <th scope="col">Icon</th>
                 <th scope="col">Title</th>
+                <th scope="col">Text</th>
                 {{-- Show --}}
                 <th scope="col"> </th>
                 {{-- Edit --}}
@@ -25,21 +27,23 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($resumeTitles2 as $link)
+            @foreach ($aboutMeInfos as $link)
             <tr>
                 <th scope="row">{{$link->id}}</th>
+                <td>{{$link->icon}}</td>
                 <td>{{$link->title}}</td>
+                <td>{{$link->text}}</td>
                 <td>
                     {{-- Show --}}
-                    <a href="/showResumeTitles2/{{$link->id}}" class="btn btn-primary">SHOW</a>
+                    <a href="/showAboutMeInfos/{{$link->id}}" class="btn btn-primary">SHOW</a>
                 </td>
                 <td>
                     {{-- Edit --}}
-                    <a href="/editResumeTitles2/{{$link->id}}" class="btn btn-warning">EDIT</a>
+                    <a href="/editAboutMeInfos/{{$link->id}}" class="btn btn-warning">EDIT</a>
                 </td>
                 <td>
                     {{-- Delete --}}
-                    <form action="/destroyResumeTitles2/{{$link->id}}" method="POST">
+                    <form action="/destroyAboutMeInfos/{{$link->id}}" method="POST">
                         @csrf
                         <button type="submit" class="btn btn-danger">DELETE</button>
                     </form>

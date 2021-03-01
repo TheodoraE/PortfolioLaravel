@@ -34,6 +34,9 @@
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/backoffice#aboutTitles">About Titles</a>
+                    <a class="dropdown-item" href="/backoffice#aboutMeImg">About MeImage</a>
+                    <a class="dropdown-item" href="/backoffice#aboutMeContents">About MeContents</a>
+                    <a class="dropdown-item" href="/backoffice#aboutMeInfos">About MeInfos</a>
                     <a class="dropdown-item" href="/backoffice#aboutCounts">About Counts</a>
                     <a class="dropdown-item" href="/backoffice#aboutSkills">About Skills</a>
                     <a class="dropdown-item" href="/backoffice#aboutInterests">About Interests</a>
@@ -47,8 +50,10 @@
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/backoffice#resumeTitles">Resume Titles</a>
                     <a class="dropdown-item" href="/backoffice#resumeTitles2">Resume Subtitles</a>
+                    <a class="dropdown-item" href="/backoffice#resumePresentations">Resume Presentation</a>
                     <a class="dropdown-item" href="/backoffice#resumeInfos">Resume Infos</a>
                     <a class="dropdown-item" href="/backoffice#resumeEducations">Resume Education</a>
+                    <a class="dropdown-item" href="/backoffice#resumeProfessionals">Resume Professional</a>
                   </div>
                 </li>
                 

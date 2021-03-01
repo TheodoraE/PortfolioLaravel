@@ -41,7 +41,7 @@ class BackController extends Controller
         // About
         $aboutTitles = AboutTitle::all();
         $aboutMeImg = AboutMeImage::all();
-        $aboutMeContent = AboutMeContent::all();
+        $aboutMeContents = AboutMeContent::all();
         $aboutMeInfos = AboutMeInfo::all();
         // $infoCount = 1;
         $aboutCounts = AboutCount::all();
@@ -51,7 +51,7 @@ class BackController extends Controller
 
         // Resume
         $resumeTitles = ResumeTitle::all();
-        $resumePresentation = ResumePresentation::all();
+        $resumePresentations = ResumePresentation::all();
         $resumeTitles2 = ResumeTitle2::all();
         $resumeInfos = ResumeInfo::all();
         $resumeEducations = ResumeEducation::all();
@@ -67,7 +67,7 @@ class BackController extends Controller
         $contactCards = ContactCard::all();
         // $contactCount = 0;
 
-        return view('backoffice.backoffice', compact('navLinks', 'socialLinks', 'homeTitle', 'homeTitle2', 'aboutTitles', 'aboutMeImg', 'aboutMeContent', 'aboutMeInfos', 'aboutCounts', 'aboutSkills', 'aboutInterests', 'resumeTitles', 'resumePresentation', 'resumeTitles2', 'resumeInfos', 'resumeEducations', 'resumeProfessionals', 'portfolioTitles', 'portfolioFilters', 'portfolioDivs', 'contactTitles', 'contactCards'));
+        return view('backoffice.backoffice', compact('navLinks', 'socialLinks', 'homeTitle', 'homeTitle2', 'aboutTitles', 'aboutMeImg', 'aboutMeContents', 'aboutMeInfos', 'aboutCounts', 'aboutSkills', 'aboutInterests', 'resumeTitles', 'resumePresentations', 'resumeTitles2', 'resumeInfos', 'resumeEducations', 'resumeProfessionals', 'portfolioTitles', 'portfolioFilters', 'portfolioDivs', 'contactTitles', 'contactCards'));
     }
 
 
@@ -83,6 +83,18 @@ class BackController extends Controller
     public function createAboutTitles()
     {
         return view('backoffice.pages.create.createAboutTitles');
+    }
+    public function createAboutMeImg()
+    {
+        return view('backoffice.pages.create.createAboutMeImg');
+    }
+    public function createAboutMeContents()
+    {
+        return view('backoffice.pages.create.createAboutMeContents');
+    }
+    public function createAboutMeInfos()
+    {
+        return view('backoffice.pages.create.createAboutMeInfos');
     }
     public function createAboutCounts()
     {
@@ -104,6 +116,10 @@ class BackController extends Controller
     {
         return view('backoffice.pages.create.createResumeTitles2');
     }
+    public function createResumePresentations()
+    {
+        return view('backoffice.pages.create.createResumePresentations');
+    }
     public function createResumeInfos()
     {
         return view('backoffice.pages.create.createResumeInfos');
@@ -111,6 +127,10 @@ class BackController extends Controller
     public function createResumeEducations()
     {
         return view('backoffice.pages.create.createResumeEducations');
+    }
+    public function createResumeProfessionals()
+    {
+        return view('backoffice.pages.create.createResumeProfessionals');
     }
     public function createPortfolioTitles()
     {
@@ -132,7 +152,6 @@ class BackController extends Controller
     {
         return view('backoffice.pages.create.createContactCards');
     }
-
 
 
 
@@ -174,6 +193,48 @@ class BackController extends Controller
         $store = new AboutTitle;
         $store->title = $request->title;
         $store->para = $request->para;
+        $store->save();
+        return redirect()->back();
+    }
+    public function storeAboutMeImg(Request $request)
+    {
+        $validation = $request->validate([
+            "src" => 'required',
+        ]);
+
+        $store = new AboutMeImage;
+        $store->src = $request->src;
+        $store->alt = $request->alt;
+        $store->save();
+        return redirect()->back();
+    }
+    public function storeAboutMeContents(Request $request)
+    {
+        $validation = $request->validate([
+            "title" => 'required',
+            "description" => 'required',
+            "text" => 'required'
+        ]);
+
+        $store = new AboutMeContent;
+        $store->title = $request->title;
+        $store->description = $request->description;
+        $store->text = $request->text;
+        $store->save();
+        return redirect()->back();
+    }
+    public function storeAboutMeInfos(Request $request)
+    {
+        $validation = $request->validate([
+            "icon" => 'required',
+            "title" => 'required',
+            "text" => 'required'
+        ]);
+
+        $store = new AboutMeInfo;
+        $store->icon = $request->icon;
+        $store->title = $request->title;
+        $store->text = $request->text;
         $store->save();
         return redirect()->back();
     }
@@ -247,6 +308,19 @@ class BackController extends Controller
         $store->save();
         return redirect()->back();
     }
+    public function storeResumePresentations(Request $request)
+    {
+        $validation = $request->validate([
+            "name" => 'required',
+            "text" => 'required'
+        ]);
+
+        $store = new ResumePresentation;
+        $store->name = $request->name;
+        $store->text = $request->text;
+        $store->save();
+        return redirect()->back();
+    }
     public function storeResumeInfos(Request $request)
     {
         $validation = $request->validate([
@@ -272,6 +346,30 @@ class BackController extends Controller
         $store->date = $request->date;
         $store->institution = $request->institution;
         $store->description = $request->description;
+        $store->save();
+        return redirect()->back();
+    }
+    public function storeResumeProfessionals(Request $request)
+    {
+        $validation = $request->validate([
+            "title" => 'required',
+            "institution" => 'required',
+            "task1" => 'required',
+            "task2" => 'required',
+            "task3" => 'required',
+            "task4" => 'required'
+        ]);
+
+        $store = new ResumeProfessional;
+        $store->title = $request->title;
+        $store->date = $request->date;
+        $store->institution = $request->institution;
+        $store->task1 = $request->task1;
+        $store->task2 = $request->task2;
+        $store->task3 = $request->task3;
+        $store->task4 = $request->task4;
+        $store->task5 = $request->task5;
+        $store->task6 = $request->task6;
         $store->save();
         return redirect()->back();
     }
@@ -351,8 +449,6 @@ class BackController extends Controller
 
 
 
-
-
     ////  SHOW
     public function showNavLinks($id)
     {
@@ -368,6 +464,21 @@ class BackController extends Controller
     {
         $show = AboutTitle::find($id);
         return view('backoffice.pages.show.showAboutTitles', compact('show'));
+    }
+    public function showAboutMeImg($id)
+    {
+        $show = AboutMeImage::find($id);
+        return view('backoffice.pages.show.showAboutMeImg', compact('show'));
+    }
+    public function showAboutMeContents($id)
+    {
+        $show = AboutMeContent::find($id);
+        return view('backoffice.pages.show.showAboutMeContents', compact('show'));
+    }
+    public function showAboutMeInfos($id)
+    {
+        $show = AboutMeInfo::find($id);
+        return view('backoffice.pages.show.showAboutMeInfos', compact('show'));
     }
     public function showAboutCounts($id)
     {
@@ -394,6 +505,11 @@ class BackController extends Controller
         $show = ResumeTitle2::find($id);
         return view('backoffice.pages.show.showResumeTitles2', compact('show'));
     }
+    public function showResumePresentations($id)
+    {
+        $show = ResumePresentation::find($id);
+        return view('backoffice.pages.show.showResumePresentations', compact('show'));
+    }
     public function showResumeInfos($id)
     {
         $show = ResumeInfo::find($id);
@@ -403,6 +519,11 @@ class BackController extends Controller
     {
         $show = ResumeEducation::find($id);
         return view('backoffice.pages.show.showResumeEducations', compact('show'));
+    }
+    public function showResumeProfessionals($id)
+    {
+        $show = ResumeProfessional::find($id);
+        return view('backoffice.pages.show.showResumeProfessionals', compact('show'));
     }
     public function showPortfolioTitles($id)
     {
@@ -432,7 +553,6 @@ class BackController extends Controller
 
 
 
-
     ////  EDIT
     public function editNavLinks($id)
     {
@@ -448,6 +568,21 @@ class BackController extends Controller
     {
         $edit = AboutTitle::find($id);
         return view('backoffice.pages.edit.editAboutTitles', compact('edit'));
+    }
+    public function editAboutMeImg($id)
+    {
+        $edit = AboutMeImage::find($id);
+        return view('backoffice.pages.edit.editAboutMeImg', compact('edit'));
+    }
+    public function editAboutMeContents($id)
+    {
+        $edit = AboutMeContent::find($id);
+        return view('backoffice.pages.edit.editAboutMeContents', compact('edit'));
+    }
+    public function editAboutMeInfos($id)
+    {
+        $edit = AboutMeInfo::find($id);
+        return view('backoffice.pages.edit.editAboutMeInfos', compact('edit'));
     }
     public function editAboutCounts($id)
     {
@@ -474,6 +609,11 @@ class BackController extends Controller
         $edit = ResumeTitle2::find($id);
         return view('backoffice.pages.edit.editResumeTitles2', compact('edit'));
     }
+    public function editResumePresentations($id)
+    {
+        $edit = ResumePresentation::find($id);
+        return view('backoffice.pages.edit.editResumePresentations', compact('edit'));
+    }
     public function editResumeInfos($id)
     {
         $edit = ResumeInfo::find($id);
@@ -483,6 +623,11 @@ class BackController extends Controller
     {
         $edit = ResumeEducation::find($id);
         return view('backoffice.pages.edit.editResumeEducations', compact('edit'));
+    }
+    public function editResumeProfessionals($id)
+    {
+        $edit = ResumeProfessional::find($id);
+        return view('backoffice.pages.edit.editResumeProfessionals', compact('edit'));
     }
     public function editPortfolioTitles($id)
     {
@@ -509,8 +654,6 @@ class BackController extends Controller
         $edit = ContactCard::find($id);
         return view('backoffice.pages.edit.editContactCards', compact('edit'));
     }
-
-
 
 
 
@@ -554,6 +697,49 @@ class BackController extends Controller
         $update->para = $request->para;
         $update->save();
         return redirect('/backoffice');
+    }
+    public function updateAboutMeImg(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "src" => 'required',
+        ]);
+
+        $update = AboutMeImage::find($id);
+        $update->src = $request->src;
+        $update->alt = $request->alt;
+        $update->save();
+        return redirect('/backoffice'); 
+    }
+    public function updateAboutMeContents(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "title" => 'required',
+            "description" => 'required',
+            "text" => 'required'
+        ]);
+
+        $update = AboutMeContent::find($id);
+        $update->title = $request->title;
+        $update->description = $request->description;
+        $update->text = $request->text;
+        $update->save();
+        return redirect('/backoffice');
+    }
+    public function updateAboutMeInfos(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "icon" => 'required',
+            "title" => 'required',
+            "text" => 'required'
+        ]);
+
+        $update = AboutMeInfo::find($id);
+        $update->icon = $request->icon;
+        $update->title = $request->title;
+        $update->text = $request->text;
+        $update->save();
+        return redirect('/backoffice');
+        
     }
     public function updateAboutCounts(Request $request, $id)
     {
@@ -625,6 +811,18 @@ class BackController extends Controller
         $update->save();
         return redirect('/backoffice');
     }
+    public function updateResumePresentations(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "name" => 'required',
+            "text" => 'required'
+        ]);
+        $update = ResumePresentation::find($id);
+        $update->name = $request->name;
+        $update->text = $request->text;
+        $update->save();
+        return redirect('/backoffice');
+    }
     public function updateResumeInfos(Request $request, $id)
     {
         $validation = $request->validate([
@@ -650,6 +848,30 @@ class BackController extends Controller
         $update->date = $request->date;
         $update->institution = $request->institution;
         $update->description = $request->description;
+        $update->save();
+        return redirect('/backoffice');
+    }
+    public function updateResumeProfessionals(Request $request, $id)
+    {
+        $validation = $request->validate([
+            "title" => 'required',
+            "institution" => 'required',
+            "task1" => 'required',
+            "task2" => 'required',
+            "task3" => 'required',
+            "task4" => 'required'
+        ]);
+
+        $update = ResumeProfessional::find($id);
+        $update->title = $request->title;
+        $update->date = $request->date;
+        $update->institution = $request->institution;
+        $update->task1 = $request->task1;
+        $update->task2 = $request->task2;
+        $update->task3 = $request->task3;
+        $update->task4 = $request->task4;
+        $update->task5 = $request->task5;
+        $update->task6 = $request->task6;
         $update->save();
         return redirect('/backoffice');
     }
@@ -731,7 +953,6 @@ class BackController extends Controller
 
 
 
-
     ////  DESTROY
     public function destroyNavLinks($id)
     {
@@ -748,6 +969,24 @@ class BackController extends Controller
     public function destroyAboutTitles($id)
     {
         $destroy = AboutTitle::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
+    public function destroyAboutMeImg($id)
+    {
+        $destroy = AboutMeImage::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
+    public function destroyAboutMeContents($id)
+    {
+        $destroy = AboutMeContent::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
+    public function destroyAboutMeInfos($id)
+    {
+        $destroy = AboutMeInfo::find($id);
         $destroy->delete();
         return redirect('/backoffice');
     }
@@ -781,6 +1020,12 @@ class BackController extends Controller
         $destroy->delete();
         return redirect('/backoffice');
     }
+    public function destroyResumePresentations($id)
+    {
+        $destroy = ResumePresentation::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
     public function destroyResumeInfos($id)
     {
         $destroy = ResumeInfo::find($id);
@@ -790,6 +1035,12 @@ class BackController extends Controller
     public function destroyResumeEducations($id)
     {
         $destroy = ResumeEducation::find($id);
+        $destroy->delete();
+        return redirect('/backoffice');
+    }
+    public function destroyResumeProfessionals($id)
+    {
+        $destroy = ResumeProfessional::find($id);
         $destroy->delete();
         return redirect('/backoffice');
     }
@@ -826,7 +1077,6 @@ class BackController extends Controller
     
 
 
-
     //// DESTROYALL
     public function destroyAllNavLinks()
     {
@@ -847,6 +1097,30 @@ class BackController extends Controller
     public function destroyAllAboutTitles()
     {
         $destroyALL = AboutTitle::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
+    public function destroyAllAboutMeImg()
+    {
+        $destroyALL = AboutMeImage::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
+    public function destroyAllAboutMeContents()
+    {
+        $destroyALL = AboutMeContent::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
+    public function destroyAllAboutMeInfos()
+    {
+        $destroyALL = AboutMeInfo::all();
         foreach ($destroyALL as $destroy) {
             $destroy->delete();
         };
@@ -892,6 +1166,14 @@ class BackController extends Controller
         };
         return redirect('/backoffice');
     }
+    public function destroyAllResumePresentations()
+    {
+        $destroyALL = ResumePresentation::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
     public function destroyAllResumeInfos()
     {
         $destroyALL = ResumeInfo::all();
@@ -903,6 +1185,14 @@ class BackController extends Controller
     public function destroyAllResumeEducations()
     {
         $destroyALL = ResumeEducation::all();
+        foreach ($destroyALL as $destroy) {
+            $destroy->delete();
+        };
+        return redirect('/backoffice');
+    }
+    public function destroyAllResumeProfessionals()
+    {
+        $destroyALL = ResumeProfessional::all();
         foreach ($destroyALL as $destroy) {
             $destroy->delete();
         };
@@ -948,6 +1238,5 @@ class BackController extends Controller
         };
         return redirect('/backoffice');
     }
-
 
 }

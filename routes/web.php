@@ -45,6 +45,30 @@ Route::get('/editAboutTitles/{id}', [BackController::class, 'editAboutTitles']);
 Route::post('updateAboutTitles/{id}', [BackController::class, 'updateAboutTitles']);
 Route::post('/destroyAboutTitles/{id}', [BackController::class, 'destroyAboutTitles']);
 Route::post('/destroyAllAboutTitles', [BackController::class, 'destroyAllAboutTitles']);
+    // About MeImg
+Route::get('/createAboutMeImg', [BackController::class, 'createAboutMeImg']);
+Route::post('/storeAboutMeImg', [BackController::class, 'storeAboutMeImg']);
+Route::get('/showAboutMeImg/{id}', [BackController::class, 'showAboutMeImg']);
+Route::get('/editAboutMeImg/{id}', [BackController::class, 'editAboutMeImg']);
+Route::post('updateAboutMeImg/{id}', [BackController::class, 'updateAboutMeImg']);
+Route::post('/destroyAboutMeImg/{id}', [BackController::class, 'destroyAboutMeImg']);
+Route::post('/destroyAllAboutMeImg', [BackController::class, 'destroyAllAboutMeImg']);
+    // About MeContents
+Route::get('/createAboutMeContents', [BackController::class, 'createAboutMeContents']);
+Route::post('/storeAboutMeContents', [BackController::class, 'storeAboutMeContents']);
+Route::get('/showAboutMeContents/{id}', [BackController::class, 'showAboutMeContents']);
+Route::get('/editAboutMeContents/{id}', [BackController::class, 'editAboutMeContents']);
+Route::post('updateAboutMeContents/{id}', [BackController::class, 'updateAboutMeContents']);
+Route::post('/destroyAboutMeContents/{id}', [BackController::class, 'destroyAboutMeContents']);
+Route::post('/destroyAllAboutMeContents', [BackController::class, 'destroyAllAboutMeContents']);
+    // About MeInfos
+Route::get('/createAboutMeInfos', [BackController::class, 'createAboutMeInfos']);
+Route::post('/storeAboutMeInfos', [BackController::class, 'storeAboutMeInfos']);
+Route::get('/showAboutMeInfos/{id}', [BackController::class, 'showAboutMeInfos']);
+Route::get('/editAboutMeInfos/{id}', [BackController::class, 'editAboutMeInfos']);
+Route::post('updateAboutMeInfos/{id}', [BackController::class, 'updateAboutMeInfos']);
+Route::post('/destroyAboutMeInfos/{id}', [BackController::class, 'destroyAboutMeInfos']);
+Route::post('/destroyAllAboutMeInfos', [BackController::class, 'destroyAllAboutMeInfos']);
     // About Counts
 Route::get('/createAboutCounts', [BackController::class, 'createAboutCounts']);
 Route::post('/storeAboutCounts', [BackController::class, 'storeAboutCounts']);
@@ -85,6 +109,14 @@ Route::get('/editResumeTitles2/{id}', [BackController::class, 'editResumeTitles2
 Route::post('updateResumeTitles2/{id}', [BackController::class, 'updateResumeTitles2']);
 Route::post('/destroyResumeTitles2/{id}', [BackController::class, 'destroyResumeTitles2']);
 Route::post('/destroyAllResumeTitles2', [BackController::class, 'destroyAllResumeTitles2']);
+    // Resume Presentations
+Route::get('/createResumePresentations', [BackController::class, 'createResumePresentations']);
+Route::post('/storeResumePresentations', [BackController::class, 'storeResumePresentations']);
+Route::get('/showResumePresentations/{id}', [BackController::class, 'showResumePresentations']);
+Route::get('/editResumePresentations/{id}', [BackController::class, 'editResumePresentations']);
+Route::post('updateResumePresentations/{id}', [BackController::class, 'updateResumePresentations']);
+Route::post('/destroyResumePresentations/{id}', [BackController::class, 'destroyResumePresentations']);
+Route::post('/destroyAllResumePresentations', [BackController::class, 'destroyAllResumePresentations']);
     // Resume Infos
 Route::get('/createResumeInfos', [BackController::class, 'createResumeInfos']);
 Route::post('/storeResumeInfos', [BackController::class, 'storeResumeInfos']);
@@ -101,6 +133,14 @@ Route::get('/editResumeEducations/{id}', [BackController::class, 'editResumeEduc
 Route::post('updateResumeEducations/{id}', [BackController::class, 'updateResumeEducations']);
 Route::post('/destroyResumeEducations/{id}', [BackController::class, 'destroyResumeEducations']);
 Route::post('/destroyAllResumeEducations', [BackController::class, 'destroyAllResumeEducations']);
+    // Resume Professionals
+Route::get('/createResumeProfessionals', [BackController::class, 'createResumeProfessionals']);
+Route::post('/storeResumeProfessionals', [BackController::class, 'storeResumeProfessionals']);
+Route::get('/showResumeProfessionals/{id}', [BackController::class, 'showResumeProfessionals']);
+Route::get('/editResumeProfessionals/{id}', [BackController::class, 'editResumeProfessionals']);
+Route::post('updateResumeProfessionals/{id}', [BackController::class, 'updateResumeProfessionals']);
+Route::post('/destroyResumeProfessionals/{id}', [BackController::class, 'destroyResumeProfessionals']);
+Route::post('/destroyAllResumeProfessionals', [BackController::class, 'destroyAllResumeProfessionals']);
     // Portfolio Titles
 Route::get('/createPortfolioTitles', [BackController::class, 'createPortfolioTitles']);
 Route::post('/storePortfolioTitles', [BackController::class, 'storePortfolioTitles']);

@@ -1,11 +1,11 @@
-<div id="resumeEducations" class="bg-light pt-3 my-5">
+<div id="resumeProfessionals" class="bg-light pt-3 my-5">
     <div>
-        <h1 class="m-3">Resume Educations</h1>
+        <h1 class="m-3">Resume Professionals</h1>
         <div class="w-25 d-flex justify-content-around my-2">
             {{-- Create --}}
-            <a href="/createResumeEducations" class="btn btn-success">ADD</a>
+            <a href="/createResumeProfessionals" class="btn btn-success">ADD</a>
             {{-- Delete All --}}
-            <form action="/destroyAllResumeEducations" method="POST">
+            <form action="/destroyAllResumeProfessionals" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-dark">DELETE ALL</button>
             </form>
@@ -18,7 +18,12 @@
                 <th scope="col">Title</th>
                 <th scope="col">Date</th>
                 <th scope="col">Institution</th>
-                {{-- <th scope="col">Description</th> --}}
+                {{-- <th scope="col">Task 1</th>
+                <th scope="col">Task 2</th>
+                <th scope="col">Task 3</th>
+                <th scope="col">Task 4</th>
+                <th scope="col">Task 5</th>
+                <th scope="col">Task 6</th> --}}
                 {{-- Show --}}
                 <th scope="col"> </th>
                 {{-- Edit --}}
@@ -28,24 +33,29 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($resumeEducations as $link)
+            @foreach ($resumeProfessionals as $link)
             <tr>
                 <th scope="row">{{$link->id}}</th>
-                <td>{{$link->title}}</td>
+                <td>{{$link->Title}}</td>
                 <td>{{$link->date}}</td>
                 <td>{{$link->institution}}</td>
-                {{-- <td>{{$link->description}}</td> --}}
+                {{-- <td>{{$link->task1}}</td>
+                <td>{{$link->task2}}</td>
+                <td>{{$link->task3}}</td>
+                <td>{{$link->task4}}</td>
+                <td>{{$link->task5}}</td>
+                <td>{{$link->task6}}</td> --}}
                 <td>
                     {{-- Show --}}
-                    <a href="/showResumeEducations/{{$link->id}}" class="btn btn-primary">SHOW</a>
+                    <a href="/showResumeProfessionals/{{$link->id}}" class="btn btn-primary">SHOW</a>
                 </td>
                 <td>
                     {{-- Edit --}}
-                    <a href="/editResumeEducations/{{$link->id}}" class="btn btn-warning">EDIT</a>
+                    <a href="/editResumeProfessionals/{{$link->id}}" class="btn btn-warning">EDIT</a>
                 </td>
                 <td>
                     {{-- Delete --}}
-                    <form action="/destroyResumeEducations/{{$link->id}}" method="POST">
+                    <form action="/destroyResumeProfessionals/{{$link->id}}" method="POST">
                         @csrf
                         <button type="submit" class="btn btn-danger">DELETE</button>
                     </form>

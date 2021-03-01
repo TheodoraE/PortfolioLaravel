@@ -1,4 +1,4 @@
-<div id="aboutSkills" class="bg-light my-5 p-2">
+<div id="aboutSkills" class="bg-light pt-3 my-5">
     <div>
         <h1 class="m-3">About Skills</h1>
         <div class="w-25 d-flex justify-content-around my-2">

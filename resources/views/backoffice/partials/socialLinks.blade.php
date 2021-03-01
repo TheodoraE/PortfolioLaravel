@@ -1,4 +1,4 @@
-<div id="socialLinks" class="my-5 bg-light p-2">
+<div id="socialLinks" class="bg-light pt-3 my-5">
     <div>
         <h1 class="m-3">Social Links</h1>
         <div class="w-25 d-flex justify-content-around my-2">
