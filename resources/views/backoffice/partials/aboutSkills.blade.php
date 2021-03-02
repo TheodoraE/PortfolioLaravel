@@ -3,9 +3,9 @@
         <h1 class="m-3">About Skills</h1>
         <div class="w-25 d-flex justify-content-around my-2">
             {{-- Create --}}
-            <a href="/createAboutSkills" class="btn btn-success">ADD</a>
+            <a href="{{route('createAboutSkills')}}" class="btn btn-success">ADD</a>
             {{-- Delete All --}}
-            <form action="/destroyAllAboutSkills" method="POST">
+            <form action="{{route('destroyAllAboutSkills')}}" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-dark">DELETE ALL</button>
             </form>

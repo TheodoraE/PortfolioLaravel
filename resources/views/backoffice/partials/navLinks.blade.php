@@ -4,9 +4,9 @@
             <h1 class="m-3">Nav Links</h1>
             <div class="w-25 d-flex justify-content-around my-2">
                 {{-- Create --}}
-                <a href="/createNavLinks" class="btn btn-success">ADD</a>
+                <a href="{{route('createNavLinks')}}" class="btn btn-success">ADD</a>
                 {{-- Delete All --}}
-                <form action="/destroyAllNavLinks" method="POST">
+                <form action="{{route('destroyAllNavLinks')}}" method="POST">
                     @csrf
                     <button type="submit" class="btn btn-dark">DELETE ALL</button>
                 </form>

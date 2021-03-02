@@ -3,9 +3,9 @@
         <h1 class="m-3">Contact Cards</h1>
         <div class="w-25 d-flex justify-content-around my-2">
             {{-- Create --}}
-            <a href="/createContactCards" class="btn btn-success">ADD</a>
+            <a href="{{route('createContactCards')}}" class="btn btn-success">ADD</a>
             {{-- Delete All --}}
-            <form action="/destroyAllContactCards" method="POST">
+            <form action="{{route('destroyAllContactCards')}}" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-dark">DELETE ALL</button>
             </form>

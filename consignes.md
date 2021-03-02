@@ -13,12 +13,12 @@ Git/GitHub
 
 ## Minimum requis : 
 __Template(extends, yield,include etc)__
-Crud complet pour chaque section
+__Crud complet pour chaque section__
 __La db doit etre créer avec des fichiers migrations__
 __Des seeders ou factory selon besoin pour chaques données__
 __Les images doivent déjà être dans public__
-Des validates
-Des old
+__Des validates__
+__Des old__
 Des routes nomées
 
 Have fun && Good Luck

@@ -7,7 +7,7 @@
     <title>Portfolio - Backoffice</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
-<body style="background: url('{{asset('img/bg.jpg')}}')">
+<body style="background: url('{{asset('img/DarkBg.jpg')}}')">
     {{-- Header --}}
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-3 mx-5 fixed-top">

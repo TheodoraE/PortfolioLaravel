@@ -20,7 +20,7 @@
                 @endif
             </div>
     
-            <form action="/storeResumeInfos" method="POST">
+            <form action="{{route('storeResumeInfos')}}" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="">Info : </label>

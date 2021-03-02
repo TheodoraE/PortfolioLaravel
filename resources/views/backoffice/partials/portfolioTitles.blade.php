@@ -3,9 +3,9 @@
         <h1 class="m-3">Portfolio Titles</h1>
         <div class="w-25 d-flex justify-content-around my-2">
             {{-- Create --}}
-            <a href="/createPortfolioTitles" class="btn btn-success">ADD</a>
+            <a href="{{route('createPortfolioTitles')}}" class="btn btn-success">ADD</a>
             {{-- Delete All --}}
-            <form action="/destroyAllPortfolioTitles" method="POST">
+            <form action="{{route('destroyAllPortfolioTitles')}}" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-dark">DELETE ALL</button>
             </form>

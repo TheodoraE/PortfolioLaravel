@@ -3,9 +3,9 @@
         <h1 class="m-3">Resume Subtitles</h1>
         <div class="w-25 d-flex justify-content-around my-2">
             {{-- Create --}}
-            <a href="/createResumeTitles2" class="btn btn-success">ADD</a>
+            <a href="{{route('createResumeTitles2')}}" class="btn btn-success">ADD</a>
             {{-- Delete All --}}
-            <form action="/destroyAllResumeTitles2" method="POST">
+            <form action="{{route('destroyAllResumeTitles2')}}" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-dark">DELETE ALL</button>
             </form>

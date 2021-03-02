@@ -2,7 +2,7 @@
 <section id="about" class="about">
 
     <!-- ======= About Me ======= -->
-    <div class="about-me container">
+    <div class="about-me container mt-5">
 
       <div class="section-title">
         <h2>{{$aboutTitle[0]->title}}</h2>
@@ -40,7 +40,7 @@
     </div><!-- End About Me -->
 
     <!-- ======= Counts ======= -->
-    <div class="counts container">
+    <div class="counts container mt-5">
 
       <div class="row">
 

@@ -3,9 +3,9 @@
         <h1 class="m-3">Social Links</h1>
         <div class="w-25 d-flex justify-content-around my-2">
             {{-- Create --}}
-            <a href="/createSocialLinks" class="btn btn-success">ADD</a>
+            <a href="{{route('createSocialLinks')}}" class="btn btn-success">ADD</a>
             {{-- Delete All --}}
-            <form action="/destroyAllSocialLinks" method="POST">
+            <form action="{{route('destroyAllSocialLinks')}}" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-dark">DELETE ALL</button>
             </form>

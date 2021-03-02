@@ -3,9 +3,9 @@
         <h1 class="m-3">Portfolio Filters</h1>
         <div class="w-25 d-flex justify-content-around my-2">
             {{-- Create --}}
-            <a href="/createPortfolioFilters" class="btn btn-success">ADD</a>
+            <a href="{{route('createPortfolioFilters')}}" class="btn btn-success">ADD</a>
             {{-- Delete All --}}
-            <form action="/destroyAllPortfolioFilters" method="POST">
+            <form action="{{route('destroyAllPortfolioFilters')}}" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-dark">DELETE ALL</button>
             </form>
