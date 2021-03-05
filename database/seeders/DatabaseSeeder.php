@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             AboutSkillSeeder::class,
             AboutInterestSeeder::class,
             ResumeTitleSeeder::class,
+            ResumeDocSeeder::class,
             ResumePresentationSeeder::class,
             ResumeTitle2Seeder::class,
             ResumeInfoSeeder::class,

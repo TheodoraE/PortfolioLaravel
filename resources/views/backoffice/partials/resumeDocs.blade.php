@@ -5,10 +5,10 @@
             {{-- Create --}}
             {{-- <a href="{{route('createResumeDocs')}}" class="btn btn-success">ADD</a> --}}
             {{-- Delete All --}}
-            <form action="{{route('destroyAllResumeDocs')}}" method="POST">
+            {{-- <form action="{{route('destroyAllResumeDocs')}}" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-dark">DELETE ALL</button>
-            </form>
+            </form> --}}
         </div>
     </div>
     <table class="table">
@@ -22,7 +22,7 @@
                 {{-- Edit --}}
                 <th scope="col"> </th>
                 {{-- Delete --}}
-                <th scope="col"> </th>
+                {{-- <th scope="col"> </th> --}}
             </tr>
         </thead>
         <tbody>
@@ -39,13 +39,13 @@
                     {{-- Edit --}}
                     <a href="/editResumeDocs/{{$link->id}}" class="btn btn-warning">EDIT</a>
                 </td>
-                <td>
+                {{-- <td> --}}
                     {{-- Delete --}}
-                    <form action="/destroyResumeDocs/{{$link->id}}" method="POST">
+                    {{-- <form action="/destroyResumeDocs/{{$link->id}}" method="POST">
                         @csrf
                         <button type="submit" class="btn btn-danger">DELETE</button>
-                    </form>
-                </td>
+                    </form> --}}
+                {{-- </td> --}}
             </tr>
             @endforeach
         </tbody>

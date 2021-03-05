@@ -838,7 +838,7 @@ class BackController extends Controller
 
         $update = ResumeDoc::find($id);
         $update->name = $request->name;
-        $update->src = $request->src;
+        $update->src = $request->file("src")->hashName();
         $update->save();
         return redirect('/backoffice');
     }
