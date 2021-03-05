@@ -142,8 +142,8 @@ Route::post('updateResumeProfessionals/{id}', [BackController::class, 'updateRes
 Route::post('/destroyResumeProfessionals/{id}', [BackController::class, 'destroyResumeProfessionals']);
 Route::post('/destroyAllResumeProfessionals', [BackController::class, 'destroyAllResumeProfessionals'])->name('destroyAllResumeProfessionals');
     // Resume Docs
-Route::get('/createResumeDocs', [BackController::class, 'createResumeDocs'])->name('createResumeDocs');
-Route::post('/storeResumeDocs', [BackController::class, 'storeResumeDocs'])->name('storeResumeDocs');
+// Route::get('/createResumeDocs', [BackController::class, 'createResumeDocs'])->name('createResumeDocs');
+// Route::post('/storeResumeDocs', [BackController::class, 'storeResumeDocs'])->name('storeResumeDocs');
 Route::get('/showResumeDocs/{id}', [BackController::class, 'showResumeDocs']);
 Route::get('/editResumeDocs/{id}', [BackController::class, 'editResumeDocs']);
 Route::post('updateResumeDocs/{id}', [BackController::class, 'updateResumeDocs']);
@@ -189,3 +189,7 @@ Route::get('/editContactCards/{id}', [BackController::class, 'editContactCards']
 Route::post('updateContactCards/{id}', [BackController::class, 'updateContactCards']);
 Route::post('/destroyContactCards/{id}', [BackController::class, 'destroyContactCards']);
 Route::post('/destroyAllContactCards', [BackController::class, 'destroyAllContactCards'])->name('destroyAllContactCards');
+
+
+
+Route::get('/downloadResumeDocs/{id}', [BackController::class, 'downloadResumeDocs']);

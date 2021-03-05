@@ -115,10 +115,10 @@ class BackController extends Controller
     {
         return view('backoffice.pages.create.createResumeTitles');
     }
-    public function createResumeDocs()
-    {
-        return view('backoffice.pages.create.createResumeDocs');
-    }
+    // public function createResumeDocs()
+    // {
+    //     return view('backoffice.pages.create.createResumeDocs');
+    // }
     public function createResumeTitles2()
     {
         return view('backoffice.pages.create.createResumeTitles2');
@@ -304,19 +304,19 @@ class BackController extends Controller
         $store->save();
         return redirect()->back();
     }
-    public function storeResumeDocs(Request $request)
-    {
-        $validation = $request->validate([
-            "src" => 'required',
-        ]);
+    // public function storeResumeDocs(Request $request)
+    // {
+    //     $validation = $request->validate([
+    //         "src" => 'required',
+    //     ]);
 
-        $store = new ResumeDoc;
-        $store->name = $request->name;
-        $store->src = $request->file('src')->hashName();
-        Storage::put('public/img', $request->file('src'));
-        $store->save();
-        return redirect()->back();
-    }
+    //     $store = new ResumeDoc;
+    //     $store->name = $request->name;
+    //     $store->src = $request->file('src')->hashName();
+    //     Storage::put('public/doc', $request->file('src'));
+    //     $store->save();
+    //     return redirect()->back();
+    // }
     public function storeResumeTitles2(Request $request)
     {
         $validation = $request->validate([
@@ -1295,4 +1295,10 @@ class BackController extends Controller
         return redirect('/backoffice');
     }
 
+
+    public function downloadResumeDocs($id)
+    {
+        $down = ResumeDoc::find($id);
+        return Storage::download('public/doc/'.$down->src);
+    }
 }

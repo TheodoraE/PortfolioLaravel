@@ -3,7 +3,7 @@
         <h1 class="m-3">Resume Docs</h1>
         <div class="w-25 d-flex justify-content-around my-2">
             {{-- Create --}}
-            <a href="{{route('createResumeDocs')}}" class="btn btn-success">ADD</a>
+            {{-- <a href="{{route('createResumeDocs')}}" class="btn btn-success">ADD</a> --}}
             {{-- Delete All --}}
             <form action="{{route('destroyAllResumeDocs')}}" method="POST">
                 @csrf
