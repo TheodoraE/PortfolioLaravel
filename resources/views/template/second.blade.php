@@ -49,6 +49,7 @@
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/backoffice#resumeTitles">Resume Titles</a>
+                    <a class="dropdown-item" href="/backoffice#resumeDocs">Resume Docs</a>
                     <a class="dropdown-item" href="/backoffice#resumeTitles2">Resume Subtitles</a>
                     <a class="dropdown-item" href="/backoffice#resumePresentations">Resume Presentation</a>
                     <a class="dropdown-item" href="/backoffice#resumeInfos">Resume Infos</a>

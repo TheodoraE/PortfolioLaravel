@@ -14,6 +14,7 @@
         @include('backoffice.partials.aboutInterests')
 
         @include('backoffice.partials.resumeTitles')
+        @include('backoffice.partials.resumeDocs')
         @include('backoffice.partials.resumeTitles2')
         @include('backoffice.partials.resumePresentations')
         @include('backoffice.partials.resumeInfos')

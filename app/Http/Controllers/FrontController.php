@@ -17,6 +17,7 @@ use App\Models\Navlink;
 use App\Models\PortfolioDiv;
 use App\Models\PortfolioFilter;
 use App\Models\PortfolioTitle;
+use App\Models\ResumeDoc;
 use App\Models\ResumeEducation;
 use App\Models\ResumeInfo;
 use App\Models\ResumePresentation;
@@ -54,6 +55,7 @@ class FrontController extends Controller
         $resumeInfos = ResumeInfo::all();
         $resumeEducations = ResumeEducation::all();
         $resumeProfessionals = ResumeProfessional::all();
+        $resumeDocs = ResumeDoc::all();
 
         // Portfolio
         $portfolioTitle = PortfolioTitle::all();
@@ -65,7 +67,7 @@ class FrontController extends Controller
         $contactCards = ContactCard::all();
         $contactCount = 0;
 
-        return view('welcome', compact('navlinks', 'socialLinks', 'homeTitle', 'homeTitle2', 'aboutTitle', 'aboutMeImg', 'aboutMeContent', 'aboutMeInfos', 'infoCount', 'aboutCounts', 'aboutSkills', 'skillcount', 'aboutInterests', 'resumeTitle', 'resumePresentation', 'resumeTitles2', 'resumeInfos', 'resumeEducations', 'resumeProfessionals', 'portfolioTitle', 'portfolioFilters', 'portfolioDivs', 'contactTitle', 'contactCards', 'contactCount'));
+        return view('welcome', compact('navlinks', 'socialLinks', 'homeTitle', 'homeTitle2', 'aboutTitle', 'aboutMeImg', 'aboutMeContent', 'aboutMeInfos', 'infoCount', 'aboutCounts', 'aboutSkills', 'skillcount', 'aboutInterests', 'resumeTitle', 'resumePresentation', 'resumeTitles2', 'resumeInfos', 'resumeEducations', 'resumeProfessionals', 'resumeDocs', 'portfolioTitle', 'portfolioFilters', 'portfolioDivs', 'contactTitle', 'contactCards', 'contactCount'));
     }
 
 

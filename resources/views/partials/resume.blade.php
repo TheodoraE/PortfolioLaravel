@@ -5,6 +5,7 @@
       <div class="section-title">
         <h2>{{$resumeTitle[0]->title}}</h2>
         <p>{{$resumeTitle[0]->para}}</p>
+        <a href="">{{$resumeDocs[0]->name}}</a>
       </div>
 
       <div class="row">

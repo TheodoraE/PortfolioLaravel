@@ -141,6 +141,14 @@ Route::get('/editResumeProfessionals/{id}', [BackController::class, 'editResumeP
 Route::post('updateResumeProfessionals/{id}', [BackController::class, 'updateResumeProfessionals']);
 Route::post('/destroyResumeProfessionals/{id}', [BackController::class, 'destroyResumeProfessionals']);
 Route::post('/destroyAllResumeProfessionals', [BackController::class, 'destroyAllResumeProfessionals'])->name('destroyAllResumeProfessionals');
+    // Resume Docs
+Route::get('/createResumeDocs', [BackController::class, 'createResumeDocs'])->name('createResumeDocs');
+Route::post('/storeResumeDocs', [BackController::class, 'storeResumeDocs'])->name('storeResumeDocs');
+Route::get('/showResumeDocs/{id}', [BackController::class, 'showResumeDocs']);
+Route::get('/editResumeDocs/{id}', [BackController::class, 'editResumeDocs']);
+Route::post('updateResumeDocs/{id}', [BackController::class, 'updateResumeDocs']);
+Route::post('/destroyResumeDocs/{id}', [BackController::class, 'destroyResumeDocs']);
+Route::post('/destroyAllResumeDocs', [BackController::class, 'destroyAllResumeDocs'])->name('destroyAllResumeDocs');
     // Portfolio Titles
 Route::get('/createPortfolioTitles', [BackController::class, 'createPortfolioTitles'])->name('createPortfolioTitles');
 Route::post('/storePortfolioTitles', [BackController::class, 'storePortfolioTitles'])->name('storePortfolioTitles');
