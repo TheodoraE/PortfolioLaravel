@@ -19,7 +19,7 @@ class AboutMeContentSeeder extends Seeder
                 [
                     'title' => "Junior FullStack Web developer",
                     'description' => "Young problem solver oriented Web Developer eager to learn and create fun websites / JavaScript Games",
-                    'text' => "Freshly graduated Management Assistant, I decided to challenge myself and learn programming. I have found myself found of coding and especially of JavaScript. On my free time, I develop games, calculators and potential effective apps. My qualities are JavaScript and Laravel. I code on Ubuntu environment."
+                    'text' => "Freshly graduated Management Assistant, I decided to challenge myself and learn programming. I have found myself fond of coding and especially of JavaScript. On my free time, I develop games, calculators and potential effective apps. My qualities are JavaScript and Laravel. I code on Ubuntu environment."
                 ]
             ]
         );
